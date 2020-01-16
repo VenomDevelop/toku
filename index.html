@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html>
+<STYLE>A {text-decoration: none;} </STYLE>
+<head>
+<body id="ctl00_Body1">
+    <br />
+    <header class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <a href="/">
+                    <img src="https://lh5.googleusercontent.com/8sD-bsBh7ayE-bzkXs28VTwNMCclljtN1fFcmZQg5rfvTtUeOCMAp5vK5cp51ZuRDN0wrmLVoU44JOejeyvzr5l07AHe3oCLuQWTcvJ3ikYzQo2Ginc=w1280" width="350" height="95" alt="Venom logo" /></a>
+            </div>
+
+            <div id="tigerface" class="col-12 col-lg-4">
+
+                <div id="tigerfaceimg"></div>
+
+
+            </div>
+        </div>
+
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div id="navmenu" class="col-12 col-lg-8">
+                <nav><a href="/Algebra-Calculator.aspx">Discussions</a> |  <a href="#latest">Social</a> | <a href="/discussion.aspx">Events</a> | <a href="/about-tiger-algebra-solver.aspx">News</a> |  <a href="/how-to-input-problems-into-the-tiger-algebra-solver.aspx">About</a> | <a href="#yestranslate">Help</a></nav>
+            </div>
+            <div class="col-12 col-lg-4">
+                <p style="vertical-align: bottom; font-size: larger;"></p>
+               
+  <style>
+    .currently-active {
+      position: fixed;
+      margin: 10px;
+      padding: 5px;
+      bottom: 0;
+      left: 0;
+      border: solid 1px #AFAFAF;
+      border-radius: 6px;
+      font-family: "Arial";
+    }
+  </style>
+</head>
+<body>
+  <div class="currently-active">
+    <span>Currently Active: </span><span id="active"></span>
+  </div>
+</body>
+<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.20.2.js"></script>
+<script>
+var active = document.getElementById('active');
+function setCurrentlyActiveUsers(numberOfUsers) {
+  active.innerText = numberOfUsers.toString();
+}
+setCurrentlyActiveUsers(1);
+var pubnub = new PubNub({
+    publishKey : '__YOUR_PUB_KEY__',
+    subscribeKey : '__YOUR_SUB_KEY__',
+    heartbeatInterval: 30
+});
+pubnub.addListener({
+  presence: function(presenceEvent) {
+    setCurrentlyActiveUsers(presenceEvent.occupancy);
+  }
+});
+pubnub.subscribe({ 
+  channels: ['myWebPage1'],
+  withPresence: true
+});
+
+
+            </div>
+        </div>
 
