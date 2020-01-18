@@ -1,42 +1,1042 @@
- 
+
 <!DOCTYPE html>
-<html>
-<STYLE>A {text-decoration: none;} </STYLE>
+<html lang="en">
 <head>
-  <link rel="icon" href="https://lh5.googleusercontent.com/hGTelUFRdkSMutmLEwwnIrdu8lTENNi4dsKMAW2DNLZIRL_OaYsStL8gKpk_SvuYA4uAk0V8NA=w1280" type="image/x-icon"/>
-<link rel="shortcut icon" href="https://lh5.googleusercontent.com/hGTelUFRdkSMutmLEwwnIrdu8lTENNi4dsKMAW2DNLZIRL_OaYsStL8gKpk_SvuYA4uAk0V8NA=w1280" type="image/x-icon"/>
-<title>Home</title>
-<body id="ctl00_Body1">
-    <br />
-    <header class="container">
-        <div class="row">
-            <div class="col-12 col-lg-8">
-                <a href="/">
-                    <img src="https://lh5.googleusercontent.com/lcml3-R0qEjWSDS8bsDIlrO4IFX96-nrHmarbNgPFra4YjOEWsZMff9RXqtP7n4UrpbOwGd2nR1oQkHJ1HD_gvKJwoh0UlHCdAOczwMd1HnG3c4i1LU=w1280" width="350" height="95" alt="Venom logo" /></a>
-            </div>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Modern Twitter Redesign</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<style>
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800|Roboto:300,400,500,700");
+* {
+  outline-width: 0 !important;
+  font-family: 'Roboto';
+}
 
-            <div id="tigerface" class="col-12 col-lg-4">
+body, html {
+  padding: 0;
+  margin: 0;
+}
 
-                <div id="tigerfaceimg"></div>
+:root {
+  --bg1: #e5e5e5;
+  --bg2: #eee;
+  --bg3: #fff;
+  --color: #000;
+}
+
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 12;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+  background: var(--bg3);
+  width: 550px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+#modal header {
+  border-bottom: 1px solid var(--bg2);
+  padding: 15px;
+  box-sizing: border-box;
+}
+#modal header h2 {
+  margin: 0;
+  font-weight: 400;
+  color: var(--color);
+}
+#modal main {
+  padding: 15px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+#modal main > p {
+  margin: 0 0 5px 0;
+  color: var(--color);
+}
+#modal main .radio-buttons {
+  display: flex;
+  grid-gap: 15px;
+  background: #1f2730;
+  padding: 15px;
+  box-sizing: border-box;
+}
+#modal main .radio-buttons label {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  padding: 20px 0;
+}
+#modal main .radio-buttons label span {
+  color: #fff;
+  display: block;
+}
+#modal main .radio-buttons label input {
+  display: none;
+}
+#modal main .radio-buttons label input:checked ~ .border {
+  box-shadow: inset 0 0 0 2px #03A9F4;
+}
+#modal main .radio-buttons label .border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+#modal main .radio-buttons label.light {
+  background: #fff;
+}
+#modal main .radio-buttons label.light span {
+  color: #000;
+}
+#modal main .radio-buttons label.dim {
+  background: #15202b;
+}
+#modal main .radio-buttons label.dark {
+  background: #111;
+}
+#modal main .radio-buttons label.nav-style {
+  background: var(--bg3);
+}
+#modal main .radio-buttons label.nav-style span {
+  color: var(--color);
+}
+#modal.toggle {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+  z-index: 11;
+}
+#modal-overlay.toggle {
+  opacity: 1;
+  visibility: visible;
+}
+
+#more-popout-overlay {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease;
+}
+#more-popout-overlay.toggle {
+  opacity: 1;
+  visibility: visible;
+}
+
+#more-popout {
+  position: fixed;
+  width: 250px;
+  left: -1px;
+  background: var(--bg3);
+  height: 100%;
+  z-index: 10;
+  border-left: 1px solid var(--bg2);
+  transition: 0.2s ease;
+}
+#more-popout .nav-item:first-of-type {
+  border-bottom: 1px solid var(--bg2);
+}
+#more-popout .nav-item:first-of-type .nav-text span {
+  opacity: .5;
+  font-size: 12px;
+  display: block;
+}
+#more-popout.nav-closed {
+  left: -187px;
+}
+#more-popout.nav-closed.toggle {
+  left: 64px;
+}
+#more-popout.toggle {
+  left: 250px;
+}
+#more-popout.toggle.nav-closed {
+  left: 64px;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 250px;
+}
+.wrapper.nav-closed {
+  padding-left: 64px;
+}
+
+body {
+  background: var(--bg1);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 64px;
+  background: var(--bg3);
+  height: 100vh;
+  z-index: 10;
+}
+nav.nav-closed {
+  width: 64px;
+}
+nav.nav-closed .nav-item p {
+  display: none;
+}
+
+.nav-item {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.nav-item.home {
+  border-bottom: 1px solid var(--bg2);
+  color: #03A9F4;
+}
+.nav-item .icon-container {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-item i {
+  font-size: 18px;
+}
+.nav-item img {
+  width: 32px;
+  height: 32px;
+  display: block;
+  border-radius: 50%;
+}
+.nav-item p {
+  margin: 0;
+  font-size: 16px;
+}
+.nav-item:hover {
+  background: var(--bg2);
+}
+.nav-item.logout {
+  color: #ff2f20 !important;
+}
+
+body > header {
+  background: url("https://source.unsplash.com/2560x1440/daily") center/cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 250px;
+}
+body > header .wrapper {
+  position: relative;
+  padding-left: 0;
+}
+body > header .top {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+body > header .top img {
+  width: 72px;
+  height: 72px;
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+body > header .top .user {
+  margin-left: 15px;
+  color: #fff;
+  text-shadow: 0 2px 5px black;
+}
+body > header .top .user h2 {
+  margin: 0;
+  font-weight: 400;
+}
+body > header .top .user p {
+  margin: 0;
+  opacity: .5;
+}
+body > header .bottom {
+  display: flex;
+  align-items: center;
+}
+body > header .bottom a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 5px 10px;
+  margin-right: 15px;
+  text-shadow: 0 2px 5px black;
+}
+body > header .bottom a p {
+  margin: 0;
+  font-size: 14px;
+  opacity: .5;
+}
+body > header .bottom a h3 {
+  margin: 0;
+  font-weight: 400;
+}
+body > header .bottom a:hover {
+  box-shadow: inset 0 -4px 0 #fff;
+}
+body > header:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 125px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6) 90%);
+}
+body > header.nav-closed {
+  margin-left: 64px;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 650px auto;
+  grid-gap: 20px;
+  align-items: flex-start;
+  margin: 20px auto 50px;
+}
+
+#timeline {
+  background: var(--bg3);
+  border-radius: 5px;
+  overflow: hidden;
+}
+#timeline footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0;
+  border-top: 1px solid var(--bg2);
+}
+#timeline footer i {
+  margin-bottom: 10px;
+  color: var(--color);
+}
+#timeline footer button {
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+  color: var(--color);
+}
+#timeline footer button:hover {
+  background: var(--bg2);
+}
+
+.new-tweet textarea {
+  border: none;
+  width: 100%;
+  resize: none;
+  padding: 15px;
+  height: auto;
+  box-sizing: border-box;
+  height: 51px;
+  cursor: pointer;
+  color: var(--color);
+  background: var(--bg3);
+}
+.new-tweet textarea:focus, .new-tweet textarea:not(:placeholder-shown) {
+  height: 100px;
+  cursor: text;
+}
+.new-tweet textarea:focus ~ .btns, .new-tweet textarea:not(:placeholder-shown) ~ .btns {
+  height: 100%;
+  padding: 0 15px 15px;
+}
+.new-tweet .btns {
+  padding: 0 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 0;
+}
+.new-tweet .btns .btn {
+  margin-right: 15px;
+}
+.new-tweet .btns .btn button {
+  padding: 0;
+  padding: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  color: var(--color);
+}
+.new-tweet .btns .btn button:hover {
+  background: var(--bg2);
+}
+.new-tweet .btns .btn:last-child {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0;
+}
+.new-tweet .btns .btn:last-child button {
+  width: auto;
+  border-radius: 3px;
+  padding: 0 10px;
+  background: #03A9F4;
+  color: #fff;
+}
+.new-tweet .btns .btn:last-child button:hover {
+  background: #039fe5;
+}
+.new-tweet .btns .btn:last-child button i {
+  margin-right: 10px;
+}
+
+.tweet {
+  border-top: 1px solid var(--bg2);
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.tweet .left {
+  margin-right: 15px;
+}
+.tweet .left img {
+  width: 42px;
+  height: 42px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.tweet .right {
+  width: 100%;
+}
+.tweet .right .info {
+  display: flex;
+  align-items: center;
+  color: var(--color);
+  margin-bottom: 5px;
+}
+.tweet .right .info p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.tweet .right .info p span {
+  margin: 0 10px;
+  font-size: 12px;
+  opacity: .5;
+}
+.tweet .right .info time {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  opacity: .5;
+}
+.tweet .right .info time:before {
+  content: "";
+  height: 2px;
+  width: 2px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: var(--color);
+}
+.tweet .right .message p {
+  margin: 0;
+  color: var(--color);
+  line-height: 20px;
+}
+.tweet .right .message img {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.tweet .right .btns {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.tweet .right .btns button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+  color: var(--color);
+  font-size: 12px;
+}
+.tweet .right .btns button i {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 5px;
+  font-size: 16px;
+}
+.tweet .right .btns button.blue:hover {
+  color: #03A9F4;
+}
+.tweet .right .btns button.blue:hover i {
+  background: rgba(3, 169, 244, 0.1);
+}
+.tweet .right .btns button.green:hover {
+  color: #4CAF50;
+}
+.tweet .right .btns button.green:hover i {
+  background: rgba(76, 175, 80, 0.1);
+}
+.tweet .right .btns button.red:hover {
+  color: #ff2f20;
+}
+.tweet .right .btns button.red:hover i {
+  background: rgba(255, 47, 32, 0.1);
+}
+.tweet:hover {
+  background: var(--bg2);
+}
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+  border-radius: 5px;
+  display: block;
+  margin-top: 10px;
+}
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+.search-container .search-input {
+  width: 100%;
+  position: relative;
+}
+.search-container .search-input input {
+  background: var(--bg3);
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
+  color: var(--color);
+  padding: 15px 15px 15px 55px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.search-container .search-input input:not(:placeholder-shown) ~ i {
+  opacity: 1;
+}
+.search-container .search-input i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0.4;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: var(--color);
+}
+.search-container .search-results {
+  border-top: 1px solid var(--bg2);
+  background: var(--bg3);
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+  display: none;
+}
+.search-container .search-results .result {
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  color: var(--color);
+}
+.search-container .search-results .result p {
+  margin: 0;
+}
+.search-container .search-results .result img {
+  width: 42px;
+  height: 42px;
+  display: block;
+  margin-right: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.search-container .search-results .result span {
+  display: block;
+  opacity: .5;
+  font-size: 12px;
+}
+.search-container .search-results .result:hover {
+  background: var(--bg2);
+  cursor: pointer;
+}
+.search-container .search-results .result:last-child p {
+  font-size: 12px;
+}
+.search-container .search-results hr {
+  border: none;
+  height: 1px;
+  background: var(--bg2);
+  margin: 0;
+}
+
+#right section {
+  padding: 15px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--bg2);
+  background: var(--bg3);
+  overflow: hidden;
+}
+#right section header {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+#right section header h3 {
+  flex: 1;
+  font-weight: 400;
+  margin: 0;
+  color: var(--color);
+}
+#right section header button {
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  color: var(--color);
+}
+#right section header button:hover {
+  background: var(--bg2);
+}
+#right section header a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #03A9F4;
+}
+#right section:first-of-type {
+  border-radius: 3px 3px;
+}
+#right section:last-of-type {
+  border-bottom: none;
+  border-radius: 0 0 3px 3px;
+}
+#right main a {
+  text-decoration: none;
+  color: var(--color);
+  margin-bottom: 15px;
+  display: block;
+}
+#right main a:not(.trend) {
+  display: flex;
+  align-items: center;
+}
+#right main a img {
+  width: 42px;
+  height: 42px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+#right main a .trend-num {
+  font-size: 12px;
+  opacity: .5;
+}
+#right main a .trend p {
+  margin: 2px 0;
+}
+#right main a .trend span {
+  display: block;
+  opacity: .5;
+  font-size: 12px;
+}
+#right main a .trend .quote {
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--bg2);
+  margin-top: 5px;
+}
+#right main a .trend .quote .info {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  border-right: 1px solid var(--bg2);
+}
+#right main a .trend .quote img {
+  border-radius: 0;
+  width: 61px;
+  height: 61px;
+}
+#right main a .trend .quote:hover {
+  background: var(--bg2);
+}
+#right main a .trend .quote:hover .info > p {
+  color: #03A9F4;
+}
+#right main a .user {
+  margin-left: 15px;
+}
+#right main a .user p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+#right main a .user p small {
+  margin-left: 5px;
+}
+#right main a .user span {
+  font-size: 12px;
+  opacity: .5;
+  display: block;
+}
+#right main a:hover > .user p, #right main a:hover > .trend > p {
+  color: #03A9F4;
+}
+#right main a:last-child {
+  margin-bottom: 0;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
 
 
-            </div>
-        </div>
+<div id="modal">
+<header>
+<h2>Customize your view</h2>
+</header>
+<main>
+<p>Background</p>
+<div class="radio-buttons">
+<label class="light">
+<input type="radio" checked name="background-option" data-theme="light">
+<span>Light</span>
+<span class="border"></span>
+</label>
+<label class="dim">
+<input type="radio" name="background-option" data-theme="dim">
+<span>Dim</span>
+<span class="border"></span>
+</label>
+<label class="dark">
+<input type="radio" name="background-option" data-theme="dark">
+<span>Dark</span>
+<span class="border"></span>
+</label>
+</div>
+<p>Navigation style</p>
+<div class="radio-buttons">
+<label class="nav-style">
+<input type="radio" name="nav-style" data-nav="opened">
+<span>Opened</span>
+<span class="border"></span>
+</label>
+<label class="nav-style">
+<input type="radio" checked name="nav-style" data-nav="closed">
+<span>Closed</span>
+<span class="border"></span>
+</label>
+</div>
+</main>
+</div>
+<div id="modal-overlay"></div>
+<div id="more-popout-overlay"></div>
+<div id="more-popout" class="nav-closed">
+<div class="nav-item">
+<div class="icon-container">
+</div>
+<div class="nav-text">
+<p>Version 0.1</p>
+<span></span>
+</div>
+</div>
+<div class="nav-item">
+<div class="icon-container">
+<i class="fas fa-bolt"></i>
+</div>
+<div class="nav-text">
+<p>Moments</p>
+</div>
+</div>
+<div class="nav-item">
+<div class="icon-container">
+<i class="fas fa-chart-bar"></i>
+</div>
+<div class="nav-text">
+<p>Venom ADS</p>
+</div>
+</div>
+<div class="nav-item">
+<div class="icon-container">
+<i class="fas fa-cog"></i>
+</div>
+<div class="nav-text">
+<p>Settings & privacy</p>
+</div>
+</div>
+<div class="nav-item">
+<div class="icon-container">
+<i class="fas fa-question-circle"></i>
+</div>
+<div class="nav-text">
+<p>Help Center</p>
+</div>
+</div>
+<div class="nav-item display">
+<div class="icon-container">
+<i class="fas fa-palette"></i>
+</div>
+<div class="nav-text">
+<p>Display</p>
+</div>
+</div>
+<div class="nav-item logout">
+<div class="icon-container">
+<i class="fas fa-sign-out-alt"></i>
+</div>
+<div class="nav-text">
+<p>Logout</p>
+</div>
+</div>
+</div>
+<nav class="nav-closed">
+<div class="nav-item home" aria-label="Home" data-balloon-pos="right" data-balloon-blunt>
+<div class="icon-container">
+<img src="https://lh6.googleusercontent.com/tKnjbRowhAv784pCBoJDjjcnpQEPjPsJ3B-w6_uOrjWhWUC4sHI8ifdoK9EQwYEzRMrkOhs=w1280">
+</div>
+<div class="nav-text">
+<p>Home</p>
+</div>
+</div>
+<div class="nav-item" aria-label="Explore" data-balloon-pos="right" data-balloon-blunt>
+<div class="icon-container">
+<i class="fas fa-hashtag"></i>
+</div>
+<div class="nav-text">
+<p>Explore</p>
+</div>
+</div>
+<div class="nav-item" aria-label="Notifications" data-balloon-pos="right" data-balloon-blunt>
+<div class="icon-container">
+<i class="fas fa-bell"></i>
+</div>
+<div class="nav-text">
+<p>Notifications</p>
+</div>
+</div>
+<div class="nav-item" aria-label="Messages" data-balloon-pos="right" data-balloon-blunt>
+<div class="icon-container">
+<i class="fas fa-envelope"></i>
+</div>
+<div class="nav-text">
+<p>Messages</p>
+</div>
+</div>
+<div class="nav-item" aria-label="Bookmarks" data-balloon-pos="right" data-balloon-blunt>
+<div class="icon-container">
+<i class="fas fa-bookmark"></i>
+</div>
+<div class="nav-text">
+<p>Bookmarks</p>
+</div>
+</div>
+<div class="nav-item" aria-label="Profile" data-balloon-pos="right" data-balloon-blunt>
+<div class="icon-container">
+<img src="">
+</div>
+<div class="nav-text">
+<p>Profile</p>
+</div>
+</div>
+<button class="nav-item" aria-label="More" data-balloon-pos="right" data-balloon-blunt>
+<span class="icon-container">
+<i class="fas fa-ellipsis-h"></i>
+</span>
+<p>More</p>
+</button>
+</nav>
+<header class="nav-closed">
+<div class="wrapper">
+<div class="top">
+<img src="https://lh6.googleusercontent.com/tKnjbRowhAv784pCBoJDjjcnpQEPjPsJ3B-w6_uOrjWhWUC4sHI8ifdoK9EQwYEzRMrkOhs=w1280">
+<div class="user">
+<h2>General</h2>
+<p></p>
+</div>
+</div>
+<div class="bottom">
+<a href="#">
+<p>Posts</p>
+<h3></h3>
+</a>
+<a href="#">
+<p>Online</p>
+<h3></h3>
+</a>
+<a href="#">
+<p>Followers</p>
+<h3></h3>
+</a>
+</div>
+</div>
+</header>
+</main>
+</section>
+</div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-30d18ea41045577cdb11c797602d08e0b9c2fa407c8b81058b1c422053ad8041.js"></script>
+<script id="rendered-js">
+$(document).ready(function () {
+  $('#search').keyup(function () {
+    if ($(this).val() < 1) {
+      $('.search-results').hide();
+      $(this).css({ 'border-radius': '5px' });
+    } else {
+      $('.search-results').show();
+      $(this).css({ 'border-radius': '5px 5px 0 0' });
+    }
+  });
 
-    </header>
+  $('.nav-item[aria-label="More"], #more-popout-overlay').click(function () {
+    $('#more-popout, #more-popout-overlay').toggleClass('toggle');
+  });
+  $('.display').click(function () {
+    $('#modal, #modal-overlay').toggleClass('toggle');
+  });
+  $('#modal-overlay').click(function () {
+    $('#modal, #modal-overlay').removeClass('toggle');
+  });
 
-    <div class="container">
-        <div class="row">
-            <div id="navmenu" class="col-12 col-lg-8">
-                <nav><a href="https://venomdevelop.github.io/VenomFlow/discussions">Discussions</a> |  <a href="https://venomdevelop.github.io/VenomFlow/social">Social</a> | <a href="https://venomdevelop.github.io/VenomFlow/events">Events</a> | <a href="https://venomdevelop.github.io/VenomFlow/news">News</a> |  <a href="https://venomdevelop.github.io/VenomFlow/about">About</a> | <a href="https://venomdevelop.github.io/VenomFlow/help">Help</a></nav>
-            </div>
-            <div class="col-12 col-lg-4">
-                <p style="vertical-align: bottom; font-size: larger;">The open source social engine</p>
+  $('input[name="background-option"]').change(function () {
+    var theme = $(this).data('theme');
+    if (theme == 'light') {
+      $(':root').css({
+        '--bg1': '#e5e5e5',
+        '--bg2': '#eee',
+        '--bg3': '#fff',
+        '--color': '#000' });
 
-<br>
-<center><h1>Whats New</h1></center>
-<br>              
-<center><h3>There are no new updates</h3></center>   
-          
-            </div>
-        </div>
+    }
+    if (theme == 'dim') {
+      $(':root').css({
+        '--bg1': '#15202b',
+        '--bg2': '#192734',
+        '--bg3': '#253341',
+        '--color': '#fff' });
+
+    }
+    if (theme == 'dark') {
+      $(':root').css({
+        '--bg1': '#1a1a1a',
+        '--bg2': '#222',
+        '--bg3': '#272727',
+        '--color': '#fff' });
+
+    }
+  });
+
+  $('input[name="nav-style"]').change(function () {
+    var style = $(this).data('nav');
+    if (style == 'closed') {
+      $('nav, body > header, #container, #more-popout').addClass('nav-closed');
+      $('.nav-item').attr('data-balloon-pos', 'right');
+    } else {
+      $('nav, body > header, #container, #more-popout').removeClass('nav-closed');
+      $('.nav-item').removeAttr('data-balloon-pos');
+    }
+  });
+
+
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
