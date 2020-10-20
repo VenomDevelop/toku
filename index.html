@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html>
-<STYLE>A {text-decoration: none;} </STYLE>
+<head>
+<title>Page Title</title>
+<style> A {text-decoration: none;} 
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+
 <head>
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
@@ -27,7 +53,7 @@
     <div class="container">
         <div class="row">
             <div id="navmenu" class="col-12 col-lg-8">
-                <nav><a href="https://venomdevelop.github.io/toku/">Tōku Home</a> |  <a href="https://venomdevelop.github.io/toku/music">Music</a> | <a href="https://venomdevelop.github.io/toku/draw">Canvas</a> | <a href="https://venomdevelop.github.io/toku/about">About</a> |  <a href="https://venomdevelop.github.io/toku/help">Help</a> <img src="https://github.com/VenomDevelop/toku/blob/master/party_animation_light_theme-00ba34ddc47512dd5ac9.gif?raw=true" width="30" height="30" alt="cool" /></a>     Happy Halloween! 🎃  
+                <nav><a href="https://venomdevelop.github.io/toku/">Tōku Home</a> |  <a href="https://venomdevelop.github.io/toku/music">Music</a> | <a href="https://venomdevelop.github.io/toku/draw">Canvas</a> | <a href="https://venomdevelop.github.io/toku/about">About</a> |  <a href="https://venomdevelop.github.io/toku/help">Help</a> <img src="https://github.com/VenomDevelop/toku/blob/master/party_animation_light_theme-00ba34ddc47512dd5ac9.gif?raw=true" width="30" height="30" alt="cool" /></a>     Happy Halloween! 🎃   <button onclick="myFunction()">Toggle dark mode</button>
           
 
 <div style = "position:absolute; left:937.5px; top:100px;">
@@ -61,3 +87,7 @@ wpac_init.push({widget: 'Comment', id: 27566});
             </div>
         </div>
         
+
+
+
+</html>
