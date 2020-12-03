@@ -1,0 +1,464 @@
+body {
+	background-color: #FFFFFF;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color: #666666;
+}
+.nospace{
+	font-size : 1px;
+}
+
+input, select{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+} 
+
+/*Stellent is obsolete - Commenting out <u> tag because it interferes with Lithium - JV 2-13-04 */
+/*this style is to fix a stellent issue that creat underline links (problem only shows up on IE on MAC)*/
+u {
+text-decoration: none;
+}
+/* End JV 2-13-04*/
+
+a.bodyText {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #333399;
+	text-decoration: none;
+}
+a.bodyText:hover {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #CC0000;
+	text-decoration: none;
+}
+
+/* global font styles (most commonly used) */
+td, p, P {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color: #666666;
+}
+
+a {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #660099;
+	text-decoration: none;
+}
+
+a:hover{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #CC0000;
+	text-decoration: underline;
+}
+/*end most commonly used styles*/
+
+/*begin login styles*/
+.login {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+a.login {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #FFCC33;
+	text-decoration: underline;
+}
+
+a.login:hover{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #CC0000;
+	text-decoration: underline;
+}
+/*end login styles*/
+
+/*begin text header styles */
+
+.pagetitle {
+	font-family: tahoma, arial, sans-serif; 
+	font-size: 14px; 
+	font-weight: bold;
+	color: 333366;
+}
+.header1 {
+ 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-weight: bold;
+	color: 3366CC;
+}
+.header2 {
+ 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	font-weight: bold;
+	color: 000000;
+}
+.header3 {
+ 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	font-weight: bold;
+	color: 666666;
+}
+
+/*begin text header styles */
+
+
+
+/*footer styles */
+.footer{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color: #666666;
+}
+a.footer{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color: #660099;
+}
+a.footer:hover {
+	color: #CC0000;
+	font-size : 10px;
+	text-decoration: underline;}
+	
+.teaserText{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color: #666666;
+}
+
+/*"module" style used on top 10 modules only*/
+.module{
+    font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color: #333399;
+	background : #E8E8E8;
+}
+a.module{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size :10px;
+	color: #333399;
+	text-decoration: none;
+}
+a.module:hover{
+
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size :10px;
+	color: #CC0000;
+	text-decoration: none;
+
+}
+
+/*for location pop-up*/
+.location{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color: #999999;
+	text-decoration: none;
+}
+a.location{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.location:hover{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color: #999999;
+	text-decoration: none;
+}
+
+/*style for 404 error page only*/
+a.error404 { 
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #ffffff;
+	text-decoration: underline;
+}
+a.error404:hover { 
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #ffffff;
+	text-decoration: underline;
+}	
+	
+/* Style is for Hardware detail pages */
+.swatch{
+	border :#000000;
+}
+
+
+/*BEGIN STYLES OF VARIOUS HEADERS*/
+.level2Nav{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 14px;
+	font-weight : bold;
+	color: #666699;
+}
+.level3Nav{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	font-weight : bold;
+	color: #666699;
+}
+.level4Nav{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	color: #666699;
+}
+
+/* Heading 1 Stytle */
+.heading1{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	font-weight: bold;
+	color: #000000;
+}
+/* Heading 2 Stytle */
+.heading2{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	font-weight: bold;
+	color: #000000;
+}
+/* Heading 3 Stytle */
+.heading3{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	font-weight: bold;
+	color: #666666;
+}
+.strongBold{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	font-weight: bold;
+	color: #000000;
+}
+.redHeaders {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color: #CC0000;
+	font-weight : bold;
+}
+.blueHeaders{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	font-weight : bold;
+	color: #333399;
+}
+a.blueHeaders{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	font-weight : bold;
+	color: #333399;
+}
+
+.smallerBlueHeaders{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	font-weight : bold;
+	color: #333399;
+}
+a.smallerBlueHeaders {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	font-weight : bold;
+	color: #333399;
+	text-decoration: none;
+}
+a.smallerBlueHeaders:hover {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	font-weight : bold;
+	color: #cc0000;
+	text-decoration: none;
+}
+
+.greyHeaders{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	font-weight : bold;
+	color: #666666;
+}
+.headers{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	font-weight : bold;
+	color: #333333;
+}
+
+.subtitle{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 16px;
+	color: #666699;
+	font-weight: 900;
+}
+.subtitle2{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 14px;
+	color: #666699;
+	font-weight: 900;
+}
+.subtitleBlack{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 16px;
+	color: #000000;
+	font-weight: 900;
+} 
+.subtitle2Black{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 14px;
+	color: #000000;
+	font-weight: 900;
+}
+/* END HEADER STYLES */
+
+/*BEGIN FONTS - OTHER COLORS (not grey)*/
+.blackBodyText{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size :11px;
+	color: #000000;
+}
+.blackLetters{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size :13px;
+	font-weight: bold;
+	color: #000000;
+}
+.smallBlackText{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size :10px;
+	color: #000000;
+}
+a.smallBlackText{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size :10px;
+	color: #000000;
+}
+
+a.smallBlackText:hover{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size :10px;
+	color: #CC0000;
+}
+
+/*home page what's new highlight*/
+.whatsnew {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color: #000000;
+}
+
+.whiteBodyText{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size :11px;
+	color: #FFFFFF;
+}
+.smallTextWhite{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color: #FFFFFF;
+}
+a.smallTextWhite{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.smallTextWhite:hover{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color: #CC0000;
+	text-decoration: none;
+}
+/*for subscript on top10 list*/
+.smallerFont{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 9px;
+}
+
+
+.sortby{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color: #ffffff;
+}
+a.signedin{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	text-decoration: none;
+	color: #cccccc;
+}
+a.signedin:hover{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	text-decoration: underline;
+	color: #cccccc;
+}
+.redBodyText{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size :11px;
+	color: #CC0000;
+}
+.smallRedText{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size :11px;
+	color: #CC0000;
+}
+.blueBodyText{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size :11px;
+	color: #333399;
+}
+
+.select {font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color: #333399;
+	text-decoration: underline;
+}
+a.select:hover {font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color: #cc0000;
+	text-decoration: underline;
+}
+
+.selectON {font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color: #CC0000;
+	font-weight : bold;
+}
+a.selectOn {font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color: #cc0000;
+	text-decoration: none;
+}
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 09:20:51 Aug 11, 2004 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:19:32 Dec 03, 2020.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 109.875
+  exclusion.robots: 0.275
+  exclusion.robots.policy: 0.262
+  RedisCDXSource: 2.284
+  esindex: 0.012
+  LoadShardBlock: 84.503 (3)
+  PetaboxLoader3.datanode: 185.679 (4)
+  CDXLines.iter: 19.425 (3)
+  load_resource: 200.72
+  PetaboxLoader3.resolve: 42.579
+*/
