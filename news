@@ -1,0 +1,70 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<STYLE> A {text-decoration: none;} </STYLE>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WM6WM9NTYC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WM6WM9NTYC');
+</script>
+<link rel="shortcut icon" href="https://raw.githubusercontent.com/VenomDevelop/toku/master/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://raw.githubusercontent.com/VenomDevelop/toku/master/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://venomdevelop.github.io/toku/text.css" type="text/css">
+<title>News</title>
+<body>
+<div id="fb-root"></div>
+    <br/>
+    <header class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <a href="https://venomdevelop.github.io/toku/">
+                    <img src="https://github.com/VenomDevelop/toku/blob/master/toku%20beta%20halloween%20logo.png?raw=true" width="133" height="45" alt="Tokū Beta Logo" /></a>
+            </div>
+            
+             <div style = "position:absolute; left:-21px; top:-25px;"><img src="https://github.com/VenomDevelop/toku/blob/master/lightsnormal.png?raw=true" alt="lights" /></a></div>
+                
+                 <div style = "position:absolute; left:430px; top:-21px;"><img src="https://github.com/VenomDevelop/toku/blob/master/lightsnormal.png?raw=true" alt="lights" /></a></div>
+                 
+                  <div style = "position:absolute; left:880px; top:-18px;"><img src="https://github.com/VenomDevelop/toku/blob/master/lightsnormal.png?raw=true" alt="lights" /></a></div>
+
+            <div id="tigerface" class="col-12 col-lg-4">
+
+                <div id="tigerfaceimg"></div>
+
+            </div>
+        </div>
+
+    </header>
+    <div class="container">
+        <div class="row">
+            <div id="navmenu" class="col-12 col-lg-8">
+<nav><a href="https://venomdevelop.github.io/toku/">My Tōku</a> | <a href="https://venomdevelop.github.io/toku/news">News</a> | <a href="https://venomdevelop.github.io/toku/events">Events</a> | <a href="https://venomdevelop.github.io/toku/catalog">Catalog</a> | <a href="https://venomdevelop.github.io/toku/about">About</a> | <a href="https://venomdevelop.github.io/toku/help">Help</a>
+
+     
+
+            </div>
+            <div class="col-12 col-lg-4">
+              
+              <center><h1>Welcome to Tōku news</h1></center>
+                                           
+              This area is still in development
+
+                                       
+              
+            </div>
+        </div>
+
+
+
