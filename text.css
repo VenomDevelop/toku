@@ -451,12 +451,17 @@ a.selectOn {font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
 	text-decoration: none;
 }
 .goog-logo-link {
-    display:none !important;
-} 
-    
-.goog-te-gadget{
-    color: transparent !important;
+   display:none !important;
 }
+
+.goog-te-gadget {
+   color: transparent !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+   color: blue !important;
+}
+
 
 
 
