@@ -1,5 +1,5 @@
 body {
-	background-color: #FFFFFF;
+	background-color: #121212;
 	 font-family:Lucida Grande, Helvetica, Arial, sans-serif;
   font-size:12px;
   line-height:1.2;
@@ -56,13 +56,13 @@ td, p, P {
 
 a {
 	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
-	color: #660099;
+	color: #FFA9FF;
 	text-decoration: none;
 }
 
 a:hover{
 	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
-	color: #CC0000;
+	color: #FF6035;
 	text-decoration: underline;
 }
 /*end most commonly used styles*/
