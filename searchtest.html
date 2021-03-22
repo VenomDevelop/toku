@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>google search test</title>
 </head>
 <body>
  
@@ -10,9 +11,10 @@
  
  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Google.png/220px-Google.png" width="110" />
 
- <form action="formaction">
-  <input type="url" id="url" placeholder="enter a valid URL" name="url"> 
-  <input type="submit" value="Search"><i class="fa fa-search"></i>
+<form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+<input name="sitesearch" type="hidden">
+<input autocomplete="on" class="form-control search" name="q" placeholder="Search in example.com" required="required"  type="text">
+<button class="button" type="submit">Search</button>
 </form>
 
 </body>
