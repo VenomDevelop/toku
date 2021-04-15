@@ -1,0 +1,200 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<STYLE> A {text-decoration: none;} </STYLE>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WM6WM9NTYC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WM6WM9NTYC');
+</script>  
+<link rel="shortcut icon" href="https://raw.githubusercontent.com/VenomDevelop/toku/master/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://raw.githubusercontent.com/VenomDevelop/toku/master/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://venomdevelop.github.io/toku/text.css" type="text/css">
+<title>Doodle DEMO </title>
+
+<body>
+<div id="fb-root"></div>
+      <br/>
+    <header class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <a href="https://venomdevelop.github.io/toku/">
+                    <img src="https://github.com/VenomDevelop/toku/blob/master/toku%20beta%20halloween%20logo.png?raw=true" width="133" height="45" alt="Tokū Beta Logo" /></a>       
+
+                    
+
+            </div>
+            
+            
+            <div id="tigerface" class="col-12 col-lg-4">
+
+                <div id="tigerfaceimg"></div>
+
+            </div>
+        </div>
+
+    </header>
+    <div class="container">
+        <div class="row">
+            <div id="navmenu" class="col-12 col-lg-8">
+<nav><a href="https://venomdevelop.github.io/toku/">My Tōku</a> | <a href="https://venomdevelop.github.io/toku/events">Events</a> | <a href="https://venomdevelop.github.io/toku/doodle">Doodle</a>  |
+<a href="https://venomdevelop.github.io/toku/about">About</a> | <a href="https://venomdevelop.github.io/toku/help">Help</a>
+    
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+    <script type="text/javascript">
+    var canvas, ctx, flag = false,
+        prevX = 0,
+        currX = 0,
+        prevY = 0,
+        currY = 0,
+        dot_flag = false;
+
+    var x = "black",
+        y = 2;
+    
+    function init() {
+        canvas = document.getElementById('can');
+        ctx = canvas.getContext("2d");
+        w = canvas.width;
+        h = canvas.height;
+    
+        canvas.addEventListener("mousemove", function (e) {
+            findxy('move', e)
+        }, false);
+        canvas.addEventListener("mousedown", function (e) {
+            findxy('down', e)
+        }, false);
+        canvas.addEventListener("mouseup", function (e) {
+            findxy('up', e)
+        }, false);
+        canvas.addEventListener("mouseout", function (e) {
+            findxy('out', e)
+        }, false);
+    }
+    
+    function color(obj) {
+        switch (obj.id) {
+            case "green":
+                x = "green";
+                break;
+            case "blue":
+                x = "blue";
+                break;
+            case "red":
+                x = "red";
+                break;
+            case "yellow":
+                x = "yellow";
+                break;
+            case "orange":
+                x = "orange";
+                break;
+            case "black":
+                x = "black";
+                break;
+            case "white":
+                x = "white";
+                break;
+        }
+        if (x == "white") y = 14;
+        else y = 2;
+    
+    }
+    
+    function draw() {
+        ctx.beginPath();
+        ctx.moveTo(prevX, prevY);
+        ctx.lineTo(currX, currY);
+        ctx.strokeStyle = x;
+        ctx.lineWidth = y;
+        ctx.stroke();
+        ctx.closePath();
+    }
+    
+    function erase() {
+        var m = confirm("Are you sure you want to clear?");
+        if (m) {
+            ctx.clearRect(0, 0, w, h);
+            document.getElementById("canvasimg").style.display = "none";
+        }
+    }
+    
+    function save() {
+        document.getElementById("canvasimg").style.border = "2px solid";
+        var dataURL = canvas.toDataURL();
+        document.getElementById("canvasimg").src = dataURL;
+        document.getElementById("canvasimg").style.display = "inline";
+    }
+    
+    function findxy(res, e) {
+        if (res == 'down') {
+            prevX = currX;
+            prevY = currY;
+            currX = e.clientX - canvas.offsetLeft;
+            currY = e.clientY - canvas.offsetTop;
+    
+            flag = true;
+            dot_flag = true;
+            if (dot_flag) {
+                ctx.beginPath();
+                ctx.fillStyle = x;
+                ctx.fillRect(currX, currY, 2, 2);
+                ctx.closePath();
+                dot_flag = false;
+            }
+        }
+        if (res == 'up' || res == "out") {
+            flag = false;
+        }
+        if (res == 'move') {
+            if (flag) {
+                prevX = currX;
+                prevY = currY;
+                currX = e.clientX - canvas.offsetLeft;
+                currY = e.clientY - canvas.offsetTop;
+                draw();
+            }
+        }
+    }
+    </script>
+    <body onload="init()">
+        <canvas id="can" width="500" height="300" style="position:absolute;top:20%;left:5%;border:2px solid;"></canvas>
+        <div style="position:absolute;top:10%;left:35%;">Choose Color</div>
+        <div style="position:absolute;top:13%;left:35%;width:10px;height:10px;background:green;" id="green" onclick="color(this)"></div>
+        <div style="position:absolute;top:13%;left:37%;width:10px;height:10px;background:blue;" id="blue" onclick="color(this)"></div>
+        <div style="position:absolute;top:13%;left:39%;width:10px;height:10px;background:red;" id="red" onclick="color(this)"></div>
+        <div style="position:absolute;top:13%;left:41%;width:10px;height:10px;background:yellow;" id="yellow" onclick="color(this)"></div>
+        <div style="position:absolute;top:13%;left:43%;width:10px;height:10px;background:orange;" id="orange" onclick="color(this)"></div>
+        <div style="position:absolute;top:13%;left:45%;width:10px;height:10px;background:black;" id="black" onclick="color(this)"></div>
+        <div style="position:absolute;top:10%;left:50%;">Eraser</div>
+        <div style="position:absolute;top:13%;left:50%;width:10px;height:10px;background:white;border:1px solid;" id="white" onclick="color(this)"></div>
+        <img id="canvasimg" style="position:absolute;top:16%;left:5%;" style="display:none;">
+        <input type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:12%;left:57%;">
+        <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:12%;left:63%;">
+
+
+
+</body>
+</html>
