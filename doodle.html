@@ -9,6 +9,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html>
 <STYLE> A {text-decoration: none;} </STYLE>
@@ -57,11 +58,6 @@
     
 <br>
 <br>
-<br>
-<br>
-<br>
-
-
 
     <script type="text/javascript">
     var canvas, ctx, flag = false,
@@ -180,19 +176,45 @@
     }
     </script>
     <body onload="init()">
-        <canvas id="can" width="500" height="300" style="position:absolute;top:20%;left:5%;border:2px solid;"></canvas>
+    <input type="button" value="save" id="btn" size="30" onclick="save()" style="position:static;top:12%;left:57%;">
+        <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:static;top:12%;left:63%;">
+    
+    <br>
+    <br>
+    
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <canvas id="can" width="500" height="300" style="position:static;top:20%;left:5%;border:2px solid;"></canvas>
         <div style="position:absolute;top:10%;left:35%;">Choose Color</div>
-        <div style="position:absolute;top:13%;left:35%;width:10px;height:10px;background:green;" id="green" onclick="color(this)"></div>
-        <div style="position:absolute;top:13%;left:37%;width:10px;height:10px;background:blue;" id="blue" onclick="color(this)"></div>
-        <div style="position:absolute;top:13%;left:39%;width:10px;height:10px;background:red;" id="red" onclick="color(this)"></div>
-        <div style="position:absolute;top:13%;left:41%;width:10px;height:10px;background:yellow;" id="yellow" onclick="color(this)"></div>
-        <div style="position:absolute;top:13%;left:43%;width:10px;height:10px;background:orange;" id="orange" onclick="color(this)"></div>
-        <div style="position:absolute;top:13%;left:45%;width:10px;height:10px;background:black;" id="black" onclick="color(this)"></div>
+        
+        <br>
+        
+         <div style="position:static;width:15px;height:15px;background:green;" id="green" onclick="color(this)"></div>
+        
+        <br>
+        
+        <div style="position:static;top;width:15px;height:15px;background:blue;" id="blue" onclick="color(this)"></div>
+        
+        <br>
+        
+        <div style="position:static;width:15px;height:15px;background:red;" id="red" onclick="color(this)"></div>
+        
+        <br>
+        
+        <div style="position:static;width:15px;height:15px;background:yellow;" id="yellow" onclick="color(this)"></div>
+        
+        <br>
+        
+        <div style="position:static;width:15px;height:15px;background:orange;" id="orange" onclick="color(this)"></div>
+        
+        <br>
+        
+        <div style="position:static;width:15px;height:15px;background:black;" id="black" onclick="color(this)"></div>
+        
+        <br>
+        
         <div style="position:absolute;top:10%;left:50%;">Eraser</div>
-        <div style="position:absolute;top:13%;left:50%;width:10px;height:10px;background:white;border:1px solid;" id="white" onclick="color(this)"></div>
+        <div style="position:static;width:14px;height:14px;background:white;border:1px solid;" id="white" onclick="color(this)"></div>
         <img id="canvasimg" style="position:absolute;top:16%;left:5%;" style="display:none;">
-        <input type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:12%;left:57%;">
-        <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:12%;left:63%;">
+        
 
 
 
