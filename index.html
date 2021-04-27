@@ -216,42 +216,8 @@ Visit the Tōku website for mobile devices <a href="https://venomdevelop.github.
 <br>
 <br>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 
-<script>
-var Konami = Konami || {};
-
-Konami.key = '38384040373937396665';
-
-Konami.onCode = function(callback) {
-    var input = '';
-    $(document).on("keydown", function(e) {
-        input += ("" + e.keyCode);
-        if (input === Konami.key) {
-            if(typeof callback == 'undefined') {
-                return alert("Shhh!");
-            }
-            else {
-                return callback();
-            }
-        }
-        if (!Konami.key.indexOf(input)) return;
-        input = ("" + e.keyCode);
-    });
-}
-
-Konami.offCode = function() {
-    $(document).off("keydown");
-}
-
-Konami.onCode();
-
-</script>
-
-
-<br>
-<br>
 
 
 
