@@ -3,11 +3,11 @@ body {
   padding: 0%;
 }
 
-nav {
-}
-
 a {
   text-decoration: none;
+}
+                                                                                                            
+nav {
 }
 
 div.scroll {
@@ -23,24 +23,6 @@ div.scroll {
 
 #page:hover {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
 }
-
-/* For user profile page only */
-
-.flex-row {
-  display: flex;
-}
-
-.flex-item {
-  width: 100;
-  padding: 0%;
-}
-
-/* For user profile page only */
-
-
-
-
 
 
