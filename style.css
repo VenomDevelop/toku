@@ -15,16 +15,15 @@ nav {
 }
 
 div.scroll {
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  align-items: center
 }
 
 .flex-container {
   display: flex;
+  align-content: center;
   flex-direction: row;
-  align-items: center
 }
 
 #page:hover {
