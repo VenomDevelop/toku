@@ -18,15 +18,13 @@ div.scroll {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-  position: absolute;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
+  align-items: center
 }
 
 .flex-container {
   display: flex;
   flex-direction: row;
+  align-items: center
 }
 
 #page:hover {
