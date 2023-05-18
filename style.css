@@ -23,6 +23,7 @@ div.scroll {
 .flex-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 #page:hover {
