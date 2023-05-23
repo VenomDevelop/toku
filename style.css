@@ -24,6 +24,7 @@ div.scroll {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  width: 100vw;
 }
 
 #page:hover {
