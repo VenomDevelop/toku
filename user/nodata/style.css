@@ -13,6 +13,8 @@ body {
 .flex-item {
   width: 100;
   padding: 5px;
+  align-items: center;
+  justify-content: center;
 }
 
 #pfp {
