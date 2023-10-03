@@ -15,9 +15,9 @@ nav {
 }
 
 div.scroll {
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: auto;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .flex-container {
