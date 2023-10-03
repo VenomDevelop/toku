@@ -1,5 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  padding: 0%;
 }
 
 a {
@@ -14,17 +15,8 @@ nav {
 }
 
 div.scroll {
-  overflow-x: auto;
+  overflow-x: scroll;
   white-space: nowrap;
-}
-
-.scroll::-webkit-scrollbar {
-    display: none;
-}
-
-.scroll {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .flex-container {
