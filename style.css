@@ -1,6 +1,5 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
   padding: 0%;
 }
 
@@ -16,18 +15,9 @@ nav {
 }
 
 div.scroll {
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   white-space: nowrap;
-}
-
-.example::-webkit-scrollbar {
-    display: none;
-}
-
-.example {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .flex-container {
