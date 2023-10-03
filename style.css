@@ -15,9 +15,18 @@ nav {
 }
 
 div.scroll {
-  overflow-x: auto;
-  overflow-y: auto;
-  white-space: normal;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.example::-webkit-scrollbar {
+    display: none;
+}
+
+.example {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .flex-container {
