@@ -20,11 +20,11 @@ div.scroll {
   white-space: nowrap;
 }
 
-.example::-webkit-scrollbar {
+.scroll::-webkit-scrollbar {
     display: none;
 }
 
-.example {
+.scroll {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
