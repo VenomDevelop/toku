@@ -1,6 +1,5 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  padding: 0%;
 }
 
 a {
@@ -12,6 +11,7 @@ table {
 }
                                                                                                             
 nav {
+  background: #F4F4F4; 
 }
 
 div.scroll {
