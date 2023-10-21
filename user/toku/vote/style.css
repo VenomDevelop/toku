@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table{
+  border-collapse: collapse;
+  width: 60%;
+  margin: auto;
+}
+
+th, td{
+  font-size: 1.5em;
+  padding: 1em;
+  text-align: center;
+}
+
+.orange{
+  background-color: #FF9900;
+  color: #FFFFFF;
+}
+
+.purple{
+  background-color: #9900FF;
+  color: #FFFFFF;
+}
