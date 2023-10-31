@@ -3,6 +3,8 @@
 
 <head>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js">
+  </script>
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Tōku</title>
@@ -16,13 +18,13 @@
 </head>
 
 <body>
-  
+
   <nav>
-  	<a href="index.html">
-  		<img src="toku.png" width="" height="" alt="Tōku" />
-   	</a>
+    <a href="index.html">
+      <img src="toku.png" width="" height="" alt="Tōku" />
+    </a>
   </nav>
-  
+
   <center>
 
   <br>
@@ -32,11 +34,17 @@
    <input type="text" placeholder="Search all pages" name="q">
    <button type="submit">Search</button>
   </form>
-  
+
   <br>
 
-  <a href="dashboard.html">Dashboard</a> | <a href="about.html">About</a>
-	
+  <button id="darkmode" onclick="darkmode()">Dark/light</button>
+  <button onclick="window.location.href='dashboard.html';">
+    Dashboard
+  </button>
+  <button onclick="window.location.href='about.html';">
+    About
+  </button>
+
   <br>  
   <br>  
   <br>
@@ -51,7 +59,7 @@
   <br>
 
 
-	  
+
   <div class="scroll">
     <div class="flex-container">
 
@@ -66,7 +74,7 @@
       </div>   
 
       &nbsp;
-	    
+
       <div title="OwensHere">
         <a href="user/owenshere/index.html"><img id="page" src="user/owenshere/icon.png" width="100" height="100" alt="OwensHere" /></a>
       </div>  
@@ -80,7 +88,7 @@
     <b>Made by Tōku</b>
     <br>
     <br>
-    
+
   <div class="scroll">
     <div class="flex-container">
       <div title="Tōku Vote - Reserved home of Tōku Vote. Coming soon!">
@@ -91,19 +99,19 @@
 
       </div>
     </div>
-	
+
     <br>
     <b>Awarded pages</b>
     <br>
     <br>
-    
+
     <div class="scroll">
       <div class="flex-container">
         <div title="NO DATA: There are no pages in this category. =(">
           <a href=""><img id="page" src="nodata.png" width="100" height="100" alt="NO DATA" /></a>
         </div> 
 
-	&nbsp;
+  &nbsp;
 
       </div>
     </div>
@@ -112,14 +120,14 @@
     <b>#ads</b>
     <br>
     <br>
-    
+
     <div class="scroll">
       <div class="flex-container">
         <div title="NO DATA: There are no pages in this category. =(">
           <a href=""><img id="page" src="nodata.png" width="100" height="100" alt="NO DATA" /></a>
         </div> 
 
-	&nbsp;
+  &nbsp;
 
       </div>
     </div>
