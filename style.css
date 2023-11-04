@@ -14,10 +14,6 @@ button{
     color: #fff;
 }
 
-body.dark-theme img {
-  filter: brightness(.8) contrast(1.2);
-}
-
 a {
   text-decoration: none;
 }
