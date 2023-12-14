@@ -22,10 +22,6 @@ table {
    width: 100%;
 }
 
-#page {
-    border-radius: 5px;
-}
-
 div.scroll {
   overflow-x: scroll;
   white-space: nowrap;
