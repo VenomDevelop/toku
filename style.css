@@ -22,7 +22,8 @@ table {
    width: 100%;
 }
 
-nav {
+#page {
+    border-radius: 5px;
 }
 
 div.scroll {
