@@ -38,12 +38,12 @@ div.scroll {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.hover {
+.hover2 {
   position: relative;
   display: inline-block;
 }
 
-.hover-content {
+.hover2-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -53,6 +53,6 @@ div.scroll {
   z-index: 1;
 }
 
-.hover:hover .dropdown-content {
+.hover2:hover .dropdown-content {
   display: block;
 }
