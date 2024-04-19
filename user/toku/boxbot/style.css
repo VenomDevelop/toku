@@ -1,21 +1,6 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
+body{
+    background: #fff;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    padding: 0%;
 }
-
-table{
-  border-collapse: collapse;
-  width: 60%;
-  margin: auto;
-}
-
-th, td{
-  font-size: 1.5em;
-  padding: 1em;
-  text-align: center;
-}
-
-.name{
-  background-color: #000000;
-  color: #FFFFFF;
-}
-
