@@ -4,3 +4,8 @@ body{
     font-family: "Montserrat", sans-serif;
     padding: 0%;
 }
+
+.announcement {
+  background-color: #000;
+  color: #fff;
+}
