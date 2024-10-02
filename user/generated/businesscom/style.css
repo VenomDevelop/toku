@@ -27,10 +27,8 @@ nav a {
     text-decoration: none;
 }
 
-.logo {
-    width: 100px;
-    height: 100px;
-    margin: 20px;
+main {
+    text-align: center;
 }
 
 .hero {
