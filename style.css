@@ -1,25 +1,60 @@
 body{
     background: #fff;
     color: #000;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", sans-serif;
     padding: 0%;
 }
 
-button{
-    cursor: pointer;
+nav {
+  font-size: 35px;
+  user-select: none;
 }
 
-.dark-mode{
-    background: #403c3c;
-    color: #c7c7c7;
+.box {
+  font-family: "Montserrat", sans-serif;
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.specialbox {
+  font-family: "Montserrat", sans-serif;
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+  user-select: none;
+  width: 110px;
+  margin-top: 5px;
+}
+
+.box:hover {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+  border-style: solid;
+  border-width: 2px;
+  user-select: none;
+}
+
+hr {
+  border-style: solid;
 }
 
 a {
   text-decoration: none;
-}
-
-table {
-   width: 100%;
+  color: #000;
 }
 
 div.scroll {
@@ -37,3 +72,407 @@ div.scroll {
 #page:hover {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+/* Google Programmable Search Engine */
+
+.gsc-control-cse {
+  font-family: "Montserrat", sans-serif !important;
+  width: 75% !important;
+  margin: auto !important;
+  background-color: #fff !important;
+  border-color: #fff !important;
+}
+
+.gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+  background-color: #fff !important;
+  border-color: #fff !important;
+}
+
+.gsc-control-cse .gsc-table-result {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.gsc-above-wrapper-area {
+  border-bottom: 0px !important;
+}
+
+.gcsc-find-more-on-google {
+  color: #000 !important;
+}
+
+.gsc-result-info {
+  color: #000 !important;
+}
+
+.gsc-orderby-label {
+  color: #000 !important;
+}
+
+.gcsc-find-more-on-google-magnifier {
+  fill: #000 !important;
+}
+
+.gs-webResult div.gs-visibleUrl {
+  color: #000 !important;
+}
+
+.gs-webResult .gs-snippet, .gs-fileFormatType {
+  color: #000 !important;
+}
+
+.gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
+  color: #000 !important;
+}
+
+.gs-result .gs-image, .gs-result .gs-promotion-image {
+  border: 0px !important;
+}
+
+/* Scroll bar */
+
+::-webkit-scrollbar {
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: ; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: ; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: ; 
+}
+
+/* Themes */ 
+
+.themes {
+  border: none;
+  background-color: inherit;
+}
+
+.light {
+  background: #fff; 
+  color: #292c33; 
+  
+  a {
+    color: #292c33;  
+  }
+  
+  input {
+    background: #fff;
+    color: #292c33;
+    border-color: #292c33;
+  }
+  
+  button {
+    background: #fff;
+    color: #292c33;
+    border-color: #292c33;
+  }
+  
+  hr {
+    color: #292c33;
+  }
+  
+  .gsc-control-cse {
+    font-family: "Montserrat", sans-serif !important;
+    background-color: #fff !important;
+    border-color: #fff !important;
+  }
+
+  .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+    background-color: #fff !important;
+    border-color: #fff !important;
+  }
+  
+  .gcsc-find-more-on-google {
+    color: #292c33 !important;
+  }
+
+  .gsc-result-info {
+    color: #292c33 !important;
+  }
+
+  .gsc-orderby-label {
+    color: #292c33 !important;
+  }
+
+  .gcsc-find-more-on-google-magnifier {
+    fill: #292c33 !important;
+  }
+
+  .gs-webResult div.gs-visibleUrl {
+    color: #292c33 !important;
+  }
+
+  .gs-webResult .gs-snippet, .gs-fileFormatType {
+    color: #292c33 !important;
+  }
+
+  .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
+    color: #292c33 !important;
+  }
+}
+
+.dark {
+  background: #292c33;
+  color: #c7c7c7;
+  
+  a {
+    color: #c7c7c7;
+  }
+  
+  input {
+    background: #292c33;
+    color: #c7c7c7;
+    border-color: #c7c7c7;
+  }
+  
+  button {
+    background: #292c33;
+    color: #c7c7c7;
+    border-color: #c7c7c7;
+  }
+  
+  hr {
+    color: #c7c7c7;
+  }
+  
+  .gsc-control-cse {
+    font-family: "Montserrat", sans-serif !important;
+    background-color: #292c33 !important;
+    border-color: #292c33 !important;
+  }
+
+  .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+    background-color: #292c33 !important;
+    border-color: #292c33 !important;
+  }
+
+  .gcsc-find-more-on-google {
+    color: #c7c7c7 !important;
+  }
+
+  .gsc-result-info {
+    color: #c7c7c7 !important;
+  }
+
+  .gsc-orderby-label {
+    color: #c7c7c7 !important;
+  }
+
+  .gcsc-find-more-on-google-magnifier {
+    fill: #c7c7c7 !important;
+  }
+
+  .gs-webResult div.gs-visibleUrl {
+    color: #c7c7c7 !important;
+  }
+
+  .gs-webResult .gs-snippet, .gs-fileFormatType {
+    color: #c7c7c7 !important;
+  }
+
+  .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
+    color: #c7c7c7 !important;
+  }
+}
+
+.mint {  
+  background: #a5baa9;
+  color: #2b4c3d;
+  
+  a {
+    color: #2b4c3d;
+  }
+  
+  input {
+    background: #fff;
+    color: #2b4c3d;
+    border-color: #2b4c3d;
+  }
+  
+  button {
+    background: #a5baa9;
+    color: #2b4c3d;
+    border-color: #2b4c3d;
+  }
+  
+  hr {
+    color: #2b4c3d;
+  }
+  
+  .gsc-control-cse {
+    font-family: "Montserrat", sans-serif !important;
+    background-color: #a5baa9 !important;
+    border-color: #a5baa9 !important;
+  }
+
+  .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+    background-color: #a5baa9 !important;
+    border-color: #a5baa9 !important;
+  }
+
+  .gcsc-find-more-on-google {
+    color: #2b4c3d !important;
+  }
+
+  .gsc-result-info {
+    color: #2b4c3d !important;
+  }
+
+  .gsc-orderby-label {
+    color: #2b4c3d !important;
+  }
+
+  .gcsc-find-more-on-google-magnifier {
+    fill: #2b4c3d !important;
+  }
+
+  .gs-webResult div.gs-visibleUrl {
+    color: #2b4c3d !important;
+  }
+
+  .gs-webResult .gs-snippet, .gs-fileFormatType {
+    color: #2b4c3d !important;
+  }
+
+  .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
+    color: #2b4c3d!important;
+  }
+}
+
+.pumpkin {
+  background: #f78820;
+  color: #aa3a1f;
+
+  a {
+    color: #aa3a1f;
+  }
+
+  input {
+    background: #fff;
+    color: #aa3a1f;
+    border-color: #aa3a1f;
+  }
+
+  button {
+    background: #f78820;
+    color: #aa3a1f;
+    border-color: #aa3a1f;
+  }
+
+  hr {
+    color: #aa3a1f;
+  }
+
+  .gsc-control-cse {
+    font-family: "Montserrat", sans-serif !important;
+    background-color: #f78820 !important;
+    border-color: #f78820 !important;
+  }
+
+  .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+    background-color: #f78820 !important;
+    border-color: #f78820 !important;
+  }
+
+  .gcsc-find-more-on-google {
+    color: #aa3a1f !important;
+  }
+
+  .gsc-result-info {
+    color: #aa3a1f !important;
+  }
+
+  .gsc-orderby-label {
+    color: #aa3a1f !important;
+  }
+
+  .gcsc-find-more-on-google-magnifier {
+    fill: #aa3a1f !important;
+  }
+
+  .gs-webResult div.gs-visibleUrl {
+    color: #aa3a1f !important;
+  }
+
+  .gs-webResult .gs-snippet, .gs-fileFormatType {
+    color: #aa3a1f !important;
+  }
+
+  .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
+    color: #aa3a1f !important;
+  }
+}
+
+.velvet {
+  background: #2e040b;
+  color: #9f3645;
+
+  a {
+    color: #9f3645;
+  }
+
+  input {
+    background: #fff;
+    color: #9f3645;
+    border-color: #9f3645;
+  }
+
+  button {
+    background: #2e040b;
+    color: #9f3645;
+    border-color: #9f3645;
+  }
+
+  hr {
+    color: #9f3645;
+  }
+
+  .gsc-control-cse {
+    font-family: "Montserrat", sans-serif !important;
+    background-color: #2e040b !important;
+    border-color: #2e040b !important;
+  }
+
+  .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+    background-color: #2e040b !important;
+    border-color: #2e040b !important;
+  }
+
+  .gcsc-find-more-on-google {
+    color: #9f3645 !important;
+  }
+
+  .gsc-result-info {
+    color: #9f3645 !important;
+  }
+
+  .gsc-orderby-label {
+    color: #9f3645 !important;
+  }
+
+  .gcsc-find-more-on-google-magnifier {
+    fill: #9f3645 !important;
+  }
+
+  .gs-webResult div.gs-visibleUrl {
+    color: #9f3645 !important;
+  }
+
+  .gs-webResult .gs-snippet, .gs-fileFormatType {
+    color: #9f3645 !important;
+  }
+
+  .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
+    color: #9f3645 !important;
+  }
+}
+
