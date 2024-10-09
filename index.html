@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js">
   </script>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> 
+  <link rel="icon" type="image/x-icon" href="media/favicon.ico"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Tōku</title>
   <meta property="og:title" content="Home - Tōku"/>
@@ -15,13 +16,16 @@
   <meta property="og:image:width" content="150" />
   <meta property="og:image:height" content="150"/>
   <meta property="og:type" content="website"/> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <nav>
     <a href="index.html">
-      <img src="toku.png" width="" height="" alt="Tōku" />
+      <b>Toku</b>
     </a>
   </nav>
 
@@ -29,39 +33,32 @@
 
   <br>
   <br>
-  <br>	  
+  <br>
   <form class="search" action="search.html">
-   <input type="text" placeholder="Search all pages" name="q">
-   <button type="submit">Search</button>
+   <input type="text" placeholder="" name="q">
+   <button class="box" type="submit"><b>Search</b></button>
   </form>
 
-  <br>
-
-  <button onclick="window.location.href='dashboard.html';">
-    Dashboard
+  <button class="specialbox" onclick="window.location.href='dashboard.html';">
+    <b>Dashboard</b>
   </button>
-  <button onclick="window.location.href='settings.html';">
-    Settings
+  <button class="specialbox" onclick="window.location.href='settings.html';">
+    <b>Settings</b>
   </button>
 
-  <br>  
-  <br>  
   <br>
-  ? Hover to learn more about a page ?
   <br>
-  <br>	  	
+  <hr class="line"> 	
   <br>	 
 
-  <b>Recently updated</b>
+  <b>Featured pages</b>
   <br>
   <br>
 
+    <div class="scroll">
+      <div class="flex-container">
 
-
-  <div class="scroll">
-    <div class="flex-container">
-
-      <div title="">
+        <div title="">
         <a href=""><img id="" src="media/invisible.png" width="100" height="100" alt="" /></a>
       </div> 
 
@@ -92,7 +89,7 @@
       &nbsp;	
 
       <div title="Antzzz">
-        <a href="user/generated/antzzz/index.html"><img id="page" src="nodata.png" width="100" height="100" alt="Antzzz" /></a>
+        <a href="user/generated/antzzz/index.html"><img id="page" src="media/default.png" width="100" height="100" alt="Antzzz" /></a>
       </div>   
 
       &nbsp;	    
@@ -107,19 +104,15 @@
         <a href=""><img id="" src="media/invisible.png" width="100" height="100" alt="" /></a>
       </div> 
 
-
+      </div>
     </div>
-  </div>
 
-    <br>
-    <b>Made by Tōku</b>
-    <br>
-    <br>
+  <br>
+  <b>Made by Toku</b>
+  <br>
+  <br>
 
-    <div class="scroll">
-      <div class="flex-container">
-
-        <div title="">
+    <div title="">
           <a href=""><img id="" src="media/invisible.png" width="100" height="100" alt="" /></a>
         </div> 
 
@@ -141,47 +134,11 @@
           <a href=""><img id="" src="media/invisible.png" width="100" height="100" alt="" /></a>
         </div> 
 
-        &nbsp;
 
-      </div>
-    </div>
-
-    <br>
-    <b>Awarded pages</b>
-    <br>
-    <br>
-
-    <div class="scroll">
-      <div class="flex-container">
-        
-        <div title="">
-          <a href=""><img id="" src="media/invisible.png" width="100" height="100" alt="" /></a>
-        </div> 
-
-        &nbsp;
-        
-        <div title="NO DATA: There are no pages in this category. =(">
-          <a href=""><img id="page" src="nodata.png" width="100" height="100" alt="NO DATA" /></a>
-        </div> 
-
-        &nbsp;
-
-        <div title="">
-          <a href=""><img id="" src="media/invisible.png" width="100" height="100" alt="" /></a>
-        </div> 
-
-        &nbsp;
-
-      </div>
-    </div>
-
-    <br>
-    <b>#ads</b>
-    <br>
-    <br>
-
-    <div class="scroll">
-      <div class="flex-container">
+  <br>
+  <b>#ads</b>
+  <br>
+  <br>
 
         <div title="">
           <a href=""><img id="" src="media/invisible.png" width="100" height="100" alt="" /></a>
@@ -189,8 +146,8 @@
 
         &nbsp;
         
-        <div title="NO DATA: There are no pages in this category. =(">
-          <a href=""><img id="page" src="nodata.png" width="100" height="100" alt="NO DATA" /></a>
+        <div title="There are no pages in this category.">
+          <a href=""><img id="page" src="media/default.png" width="100" height="100" alt="NO DATA" />         </a>
         </div> 
 
         &nbsp;
@@ -199,13 +156,32 @@
           <a href=""><img id="" src="media/invisible.png" width="100" height="100" alt="" /></a>
         </div> 
 
+  <br>
+  <b>Awarded pages</b>
+  <br>
+  <br>
+
+		<div title="">
+          <a href=""><img id="" src="media/invisible.png" width="100" height="100" alt="" /></a>
+        </div> 
+
+        &nbsp;
+        
+        <div title="There are no pages in this category.">
+          <a href=""><img id="page" src="media/default.png" width="100" height="100" alt="NO DATA" />         </a>
+        </div> 
+
         &nbsp;
 
-      </div>
-    </div>
-
+        <div title="">
+          <a href=""><img id="" src="media/invisible.png" width="100" height="100" alt="" /></a>
+        </div> 
+    
   </center>
 
 </body>
 
 </html>
+
+
+
