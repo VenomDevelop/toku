@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -14,38 +15,49 @@
   <meta property="og:url" content="https://tokupage.com"/>
   <meta property="og:image:width" content="150" />
   <meta property="og:image:height" content="150"/>
-  <meta property="og:type" content="website"/> 
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  
+
   <nav>
-  	<a href="index.html">
-  		<img src="toku.png" width="" height="" alt="Tōku" />
-   	</a>
+    <a href="index.html">
+      <b>Toku</b>
+    </a>
   </nav>
-  
+
   <br>
   <br>
   <br>
-  
+
   <center>
-	
-  <img src="version.png" width="" height="" alt="Tōku" />
-  
+
+  <h1>Toku</h1>
+
   <br>
   <br>
 
-  <p>Version 1 "Base"</p>	  
+  <b>Version 2 "Mint"</b>	  
   <p>Started October 12th, 2019</p>
+
+  <br>
+  <hr class="line">
+  <h1>Theme</h1>
+
   
-  <br>
-  <hr>
-  <h1>Settings</h1>
-  <br>
 
-  <button id="darkmode" onclick="darkmode()">Dark/light</button>
+  
 
+  <div class="theme-buttons">
+    <button class="themes" onclick="applyTheme('light')">Light</button>
+    <button class="themes" onclick="applyTheme('dark')">Dark</button>
+    <button class="themes" onclick="applyTheme('mint')">Mint</button>
+    <button class="themes" onclick="applyTheme('pumpkin')">Pumpkin</button>
+  </div>
+    
   </center>
 
 </body>
