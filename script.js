@@ -1,25 +1,15 @@
-function darkmode(){
-    var SetTheme = document.body;
-    SetTheme.classList.toggle("dark-mode")
-    var theme;
-    if(SetTheme.classList.contains("dark-mode")){
-        console.log("Dark mode");
-        theme = "DARK";
-    }else{
-        console.log("Light mode");
-        theme = "LIGHT";
-    }
+const getThemeFromLocalStorage = () => {
+    let theme = localStorage.getItem('theme');
+    return theme ? theme : 'light';
+};
 
-    localStorage.setItem("PageTheme", JSON.stringify(theme));
+let currentTheme = getThemeFromLocalStorage();
 
-}
+const applyTheme = (theme) => {
+    document.body.setAttribute("class", theme);
+    localStorage.setItem('theme', theme);
+};
 
-setInterval(() => {
-    let GetTheme = JSON.parse(localStorage.getItem("PageTheme"));
-    console.log(GetTheme);
-    if(GetTheme === "DARK"){
-        document.body.classList = "dark-mode";
-    }else{
-        document.body.classList = "";
-    }
-}, 5);
+document.addEventListener('DOMContentLoaded', () => {
+  applyTheme(currentTheme);
+});
