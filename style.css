@@ -159,6 +159,14 @@ div.scroll {
 .light {
   background: #fff; 
   color: #292c33; 
+
+.color-a {
+    color: #f69904;
+}
+
+.color-b {
+    color: #9912ff;
+}
   
   a {
     color: #292c33;  
@@ -223,6 +231,14 @@ div.scroll {
 .dark {
   background: #292c33;
   color: #c7c7c7;
+
+.color-a {
+    color: #c7c7c7;
+}
+
+.color-b {
+    color: #c7c7c7;
+}
   
   a {
     color: #c7c7c7;
@@ -287,6 +303,14 @@ div.scroll {
 .mint {  
   background: #a5baa9;
   color: #2b4c3d;
+
+.color-a {
+    color: #2b4c3d;
+}
+
+.color-b {
+    color: #2b4c3d;
+}
   
   a {
     color: #2b4c3d;
@@ -352,6 +376,14 @@ div.scroll {
   background: #f78820;
   color: #aa3a1f;
 
+.color-a {
+    color: #aa3a1f;
+}
+
+.color-b {
+    color: #aa3a1f;
+}
+
   a {
     color: #aa3a1f;
   }
@@ -415,6 +447,14 @@ div.scroll {
 .velvet {
   background: #2e040b;
   color: #9f3645;
+
+.color-a {
+    color: #9f3645;
+}
+
+.color-b {
+    color: #9f3645;
+}
 
   a {
     color: #9f3645;
