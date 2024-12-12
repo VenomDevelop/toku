@@ -5,7 +5,12 @@ body{
     padding: 0%;
 }
 
-buttom{
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+button{
   font-family: "Montserrat", sans-serif;
   background-color: #000;
   color: #fff;
