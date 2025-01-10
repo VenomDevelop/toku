@@ -583,79 +583,79 @@ div.scroll {
 }
 
 .light {
-  background: #d2e3f8; 
-  color: #96afd8; 
+  background: #171717; 
+  color: #ffffff; 
 
 .highlight {
-  background: #96afd8;
-  color: #d2e3f8;
+  background: #FFD700;
+  color: #000000;
 }
 
 .color-a {
-    color: #96afd8;
+    color: #FFD700;
 }
 
 .color-b {
-    color: #96afd8;
+    color: #FFD700;
 }
   
   a {
-    color: #96afd8;  
+    color: #ffffff;  
   }
   
   input {
-    background: #d2e3f8;
-    color: #96afd8;
-    border-color: #96afd8;
+    background: #171717;
+    color: #ffffff;
+    border-color: #ffffff;
   }
   
   button {
-    background: #d2e3f8;
-    color: #96afd8;
-    border-color: #96afd8;
+    background: #171717;
+    color: #ffffff;
+    border-color: #ffffff;
   }
   
   hr {
-    color: #96afd8;
+    color: #ffffff;
   }
   
   .gsc-control-cse {
     font-family: "Montserrat", sans-serif !important;
-    background-color: #d2e3f8 !important;
-    border-color: #d2e3f8 !important;
+    background-color: #171717 !important;
+    border-color: #171717 !important;
   }
 
   .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
-    background-color: #d2e3f8 !important;
-    border-color: #d2e3f8 !important;
+    background-color: #171717 !important;
+    border-color: #171717 !important;
   }
   
   .gcsc-find-more-on-google {
-    color: #96afd8 !important;
+    color: #ffffff !important;
   }
 
   .gsc-result-info {
-    color: #96afd8 !important;
+    color: #ffffff !important;
   }
 
   .gsc-orderby-label {
-    color: #96afd8 !important;
+    color: #ffffff !important;
   }
 
   .gcsc-find-more-on-google-magnifier {
-    fill: #96afd8 !important;
+    fill: #ffffff !important;
   }
 
   .gs-webResult div.gs-visibleUrl {
-    color: #96afd8 !important;
+    color: #ffffff !important;
   }
 
   .gs-webResult .gs-snippet, .gs-fileFormatType {
-    color: #96afd8 !important;
+    color: #ffffff !important;
   }
 
   .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
-    color: #96afd8 !important;
+    color: #ffffff !important;
   }
 }
 
