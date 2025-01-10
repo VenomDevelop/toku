@@ -584,11 +584,11 @@ div.scroll {
 
 .light {
   background: #171717; 
-  color: #ffffff; 
+  color: #c7c7c7; 
 
 .highlight {
-  background: #FFD700;
-  color: #000000;
+  background: #4D4D4D;
+  color: #c7c7c7;
 }
 
 .color-a {
@@ -600,23 +600,23 @@ div.scroll {
 }
   
   a {
-    color: #ffffff;  
+    color: #c7c7c7;  
   }
   
   input {
     background: #171717;
-    color: #ffffff;
-    border-color: #ffffff;
+    color: #c7c7c7;
+    border-color: #c7c7c7;
   }
   
   button {
     background: #171717;
-    color: #ffffff;
-    border-color: #ffffff;
+    color: #c7c7c7;
+    border-color: #c7c7c7;
   }
   
   hr {
-    color: #ffffff;
+    color: #c7c7c7;
   }
   
   .gsc-control-cse {
@@ -631,31 +631,31 @@ div.scroll {
   }
   
   .gcsc-find-more-on-google {
-    color: #ffffff !important;
+    color: #c7c7c7 !important;
   }
 
   .gsc-result-info {
-    color: #ffffff !important;
+    color: #c7c7c7 !important;
   }
 
   .gsc-orderby-label {
-    color: #ffffff !important;
+    color: #c7c7c7 !important;
   }
 
   .gcsc-find-more-on-google-magnifier {
-    fill: #ffffff !important;
+    fill: #c7c7c7 !important;
   }
 
   .gs-webResult div.gs-visibleUrl {
-    color: #ffffff !important;
+    color: #c7c7c7 !important;
   }
 
   .gs-webResult .gs-snippet, .gs-fileFormatType {
-    color: #ffffff !important;
+    color: #c7c7c7 !important;
   }
 
   .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
-    color: #ffffff !important;
+    color: #c7c7c7 !important;
   }
 }
 
