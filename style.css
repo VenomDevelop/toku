@@ -1,4 +1,4 @@
-abody{
+body{
     background: #fff;
     color: #000;
     font-family: "Montserrat", sans-serif;
@@ -65,7 +65,7 @@ input {
   border-color: #000;
   border-style: solid;
   border-width: 2px;
-  width: 156px !important; /* Home page seach box */   
+  width: 148px !important; /* Home page seach box */   
   user-select: none;
 }
 
