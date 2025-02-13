@@ -43,8 +43,7 @@ nav {
   border-width: 2px;
   cursor: pointer;
   user-select: none;
-  width: 60px;
-  margin-top: 5px;
+  width: 60px; /* Home page seach "search" button */   
 }
 
 .box:hover {
