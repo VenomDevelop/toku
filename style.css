@@ -1,4 +1,4 @@
-body{
+abody{
     background: #fff;
     color: #000;
     font-family: "Montserrat", sans-serif;
@@ -43,7 +43,7 @@ nav {
   border-width: 2px;
   cursor: pointer;
   user-select: none;
-  width: 65px; /* Home page seach "search" button */   
+  width: 64px; /* Home page seach "search" button */   
 }
 
 .box:hover {
@@ -65,7 +65,7 @@ input {
   border-color: #000;
   border-style: solid;
   border-width: 2px;
-  width: 50px !important; /* Home page seach box */   
+  width: 156px !important; /* Home page seach box */   
   user-select: none;
 }
 
