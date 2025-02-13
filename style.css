@@ -43,7 +43,7 @@ nav {
   border-width: 2px;
   cursor: pointer;
   user-select: none;
-  width: 63px; /* Home page seach "search" button */   
+  width: 65px; /* Home page seach "search" button */   
 }
 
 .box:hover {
@@ -65,7 +65,7 @@ input {
   border-color: #000;
   border-style: solid;
   border-width: 2px;
-  width: 157px; /* Home page seach box */   
+  width: 155px; /* Home page seach box */   
   user-select: none;
 }
 
