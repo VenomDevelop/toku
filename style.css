@@ -65,7 +65,7 @@ input {
   border-color: #000;
   border-style: solid;
   border-width: 2px;
-  width: 50px; /* Home page seach box */   
+  width: 50px !important; /* Home page seach box */   
   user-select: none;
 }
 
