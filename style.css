@@ -173,36 +173,36 @@ div.scroll {
 /* Themes */ 
 
 .seasonal-theme-button {
-  font-family: "Montserrat", sans-serif;
-  background-color: #fff;
-  color: #000;
-  border-color: #000;
-  border-style: solid;
-  border-width: 2px;
-  cursor: pointer;
-  user-select: none;
+  font-family: "Montserrat", sans-serif !important;
+  background-color: #fff !important;
+  color: #000 !important;
+  border-color: #000 !important;
+  border-style: solid !important;
+  border-width: 2px !important;
+  cursor: pointer !important;
+  user-select: none !important;
 }
 
 .dark-theme-button {
-  font-family: "Montserrat", sans-serif;
-  background-color: #292c33;
-  color: #c7c7c7;
-  border-color: #c7c7c7;
-  border-style: solid;
-  border-width: 2px;
-  cursor: pointer;
-  user-select: none;
+  font-family: "Montserrat", sans-serif !important;
+  background-color: #292c33 !important;
+  color: #c7c7c7 !important;
+  border-color: #c7c7c7 !important;
+  border-style: solid !important;
+  border-width: 2px !important;
+  cursor: pointer !important;
+  user-select: none !important;
 }
 
 .mint-theme-button {
-  font-family: "Montserrat", sans-serif;
-  background-color: #a5baa9;
-  color: #2b4c3d;
-  border-color: #2b4c3d;
-  border-style: solid;
-  border-width: 2px;
-  cursor: pointer;
-  user-select: none;
+  font-family: "Montserrat", sans-serif !important;
+  background-color: #a5baa9 !important;
+  color: #2b4c3d !important;
+  border-color: #2b4c3d !important;
+  border-style: solid !important;
+  border-width: 2px !important;
+  cursor: pointer !important;
+  user-select: none !important;
 }
 
 .light {
