@@ -1,64 +1,87 @@
 <!DOCTYPE html>
 <html>
-
- <head>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>im am the first!</title>
-  <meta property="og:title" content="Tōku"/>
-  <meta property="og:image" content="https://tokupage.com/thumbnail.png"/>
-  <meta property="og:description" content="Visit OwensHere on Tōku created by OwensHere"/>
-  <meta property="og:url" content="https://tokupage.com/user/owenshere/index.html"/>
-  <meta property="og:image:width" content="150" />
-  <meta property="og:image:height" content="150"/>
-  <meta property="og:type" content="website"/> 
+<head>
+<title>My Main Website Page</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; }
+  .content { max-width: 800px; margin: auto; }
+  h1 { color: #333; }
+  p { line-height: 1.6; color: #555; }
+  a { color: #007bff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
 </head>
-
 <body>
 
-  <nav>
-    <a href="http://tokupage.com/">
-      <img src="https://github.com/VenomDevelop/toku/blob/master/toku.png?raw=true" width="" height="" alt="Tōku" />
-    </a>
-  </nav>
+<div class="content">
+  <h1>Welcome to My Main Page!</h1>
+  <p>This is the primary content of my website. I'm excited you're here!</p>
 
-  <br>
+  <p>Here's an internal link: <a href="/about.html">About Us</a></p>
 
-  <div id="profile">
-    <div class="flex-row">
-      <div class="flex-item">
-        <img src="profile.png" height="100" alt="profile" />
-      </div>
-    
-      <div class="flex-item">
-        <table>
-          <tr>    
-            <td><b>OwensHere</b></td>    
-            <td></td>
-          </tr>
-          <tr>
-            <td>Joined April 13th, 2023</td>
-          </tr>
-          <tr>
-            <td>A.K.A Ti_83, as seen on youtube. youtube.com/@ti_83/</td>
-          </tr>
-          <tr>
-           <div title="Joined during Beta">
-            <img src="profile.png" height="25" alt="profile" />
-           </div>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
+  <p>And here are some external links that *should* redirect to the warning page:</p>
+  <ul>
+    <li><a href="https://www.google.com">Visit Google</a></li>
+    <li><a href="https://www.github.com/someproject/repo">Check out a GitHub Project</a></li>
+    <li><a href="http://example.com/another-external-site">Another Example Site (HTTP)</a></li>
+    <li><a href="https://www.w3.org/standards/" target="_blank">W3C Standards (new tab)</a></li>
+  </ul>
 
-  <br>
+  <p>This link should be excluded: <a href="https://docs.microsoft.com" class="no-redirect">Microsoft Docs (No Redirect)</a>.</p>
+</div>
 
-<h1>This is a landmark in history</h1>
-<p>Subscribe to my YouTube channel: www.youtube.com/@Ti_83/</p>
-  
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const warningPagePath = 'warning.html'; // Ensure this path is correct
+    const currentHostname = window.location.hostname;
+
+    document.body.addEventListener('click', function(event) {
+        let link = event.target.closest('a');
+
+        if (!link || link.classList.contains('no-redirect') || link.protocol === 'mailto:' || link.protocol === 'tel:') {
+            return;
+        }
+
+        let href = link.getAttribute('href');
+
+        if (!href || href.startsWith('#') || href.startsWith('/') || href.startsWith('?')) {
+            return;
+        }
+
+        let tempAnchor = document.createElement('a');
+        tempAnchor.href = href;
+
+        if (tempAnchor.hostname !== currentHostname) {
+            // --- NEW LOGIC HERE ---
+            // Check localStorage for the 'hideExternalWarning' preference
+            const hideWarning = localStorage.getItem('hideExternalWarning');
+
+            if (hideWarning === 'true') {
+                // If 'Do not show again' is checked, bypass the warning page
+                // and navigate directly to the external link.
+                if (link.target === '_blank') {
+                    window.open(href, '_blank');
+                } else {
+                    window.location.href = href;
+                }
+                event.preventDefault(); // Prevent default if we are handling the navigation
+                return; // Stop further execution
+            }
+            // --- END NEW LOGIC ---
+
+            event.preventDefault(); // Prevent the default link behavior for showing warning
+            const encodedUrl = encodeURIComponent(href);
+            const redirectUrl = `${warningPagePath}?url=${encodedUrl}`;
+
+            if (link.target === '_blank') {
+                window.open(redirectUrl, '_blank');
+            } else {
+                window.location.href = redirectUrl;
+            }
+        }
+    });
+});
+</script>
+
 </body>
-
 </html>
-

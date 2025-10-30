@@ -1,8 +1,17 @@
-body{
-    background: #fff;
-    color: #000;
-    font-family: "Montserrat", sans-serif;
-    padding: 0%;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  color: #000;
+  padding: 0%;
+}
+
+main {
+  margin: auto;
+  padding: 10px;
+  min-height: 80vh;
+  text-align: center;
 }
 
 nav {
@@ -43,7 +52,7 @@ nav {
   border-width: 2px;
   cursor: pointer;
   user-select: none;
-  width: 64px; /* Home page seach "search" button */   
+  width: 64px; /* Home page seach "search" button */
 }
 
 .box:hover {
@@ -65,7 +74,7 @@ input {
   border-color: #000;
   border-style: solid;
   border-width: 2px;
-  width: 148px !important; /* Home page seach box */   
+  width: 148px !important; /* Home page seach box */
   user-select: none;
 }
 
@@ -104,7 +113,8 @@ div.scroll {
   border-color: #fff !important;
 }
 
-.gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult {
   background-color: #fff !important;
   border-color: #fff !important;
 }
@@ -137,15 +147,20 @@ div.scroll {
   color: #000 !important;
 }
 
-.gs-webResult .gs-snippet, .gs-fileFormatType {
+.gs-webResult .gs-snippet,
+.gs-fileFormatType {
   color: #000 !important;
 }
 
-.gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b,
+.gs-imageResult a.gs-title:visited,
+.gs-imageResult a.gs-title:visited b {
   color: #000 !important;
 }
 
-.gs-result .gs-image, .gs-result .gs-promotion-image {
+.gs-result .gs-image,
+.gs-result .gs-promotion-image {
   border: 0px !important;
 }
 
@@ -157,26 +172,26 @@ div.scroll {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: ; 
+  background: none;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: ; 
+  background: none;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: ; 
+  background: none;
 }
 
-/* Themes */ 
+/* Themes */
 
 .seasonal-theme-button {
   font-family: "Montserrat", sans-serif !important;
-  background-color: #fff !important;
-  color: #000 !important;
-  border-color: #000 !important;
+  background-color: #343434 !important; /* Default: #fff */
+  color: #f1962b !important; /* Default: #292c33 */
+  border-color: #f1962b !important; /* Default: #292c33 */
   border-style: solid !important;
   border-width: 2px !important;
   cursor: pointer !important;
@@ -206,116 +221,122 @@ div.scroll {
 }
 
 .light {
-  background: #fff; 
-  color: #292c33; 
+  background: #343434; /* Default: #fff */
+  color: #f1962b; /* Default: #292c33 */
 
-.color-a {
-    color: #f69904;
-}
+  .toku-color-one {
+    color: #f1962b; /* Default: #f69904*/
+  }
 
-.color-b {
-    color: #9912ff;
-}
-  
+  .toku-color-two {
+    color: #f1962b; /* Default: #9912ff */
+  }
+
   a {
-    color: #292c33;  
+    color: #f1962b;
   }
-  
+
   input {
-    background: #fff;
-    color: #292c33;
-    border-color: #292c33;
+    background: #343434;
+    color: #f1962b;
+    border-color: #f1962b;
   }
-  
+
   button {
-    background: #fff;
-    color: #292c33;
-    border-color: #292c33;
+    background: #343434;
+    color: #f1962b;
+    border-color: #f1962b;
   }
-  
+
   hr {
-    color: #292c33;
+    color: #f1962b;
   }
-  
+
   .gsc-control-cse {
     font-family: "Montserrat", sans-serif !important;
-    background-color: #fff !important;
-    border-color: #fff !important;
+    background-color: #343434 !important;
+    border-color: #343434 !important;
   }
 
-  .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
-    background-color: #fff !important;
-    border-color: #fff !important;
+  .gsc-webResult.gsc-result,
+  .gsc-results .gsc-imageResult {
+    background-color: #343434 !important;
+    border-color: #343434 !important;
   }
-  
+
   .gcsc-find-more-on-google {
-    color: #292c33 !important;
+    color: #f1962b !important;
   }
 
   .gsc-result-info {
-    color: #292c33 !important;
+    color: #f1962b !important;
   }
 
   .gsc-orderby-label {
-    color: #292c33 !important;
+    color: #f1962b !important;
   }
 
   .gcsc-find-more-on-google-magnifier {
-    fill: #292c33 !important;
+    fill: #f1962b !important;
   }
 
   .gs-webResult div.gs-visibleUrl {
-    color: #292c33 !important;
+    color: #f1962b !important;
   }
 
-  .gs-webResult .gs-snippet, .gs-fileFormatType {
-    color: #292c33 !important;
+  .gs-webResult .gs-snippet,
+  .gs-fileFormatType {
+    color: #f1962b !important;
   }
 
-  .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
-    color: #292c33 !important;
+  .gs-webResult.gs-result a.gs-title:visited,
+  .gs-webResult.gs-result a.gs-title:visited b,
+  .gs-imageResult a.gs-title:visited,
+  .gs-imageResult a.gs-title:visited b {
+    color: #f1962b !important;
   }
 }
 
 .dark {
   background: #292c33;
   color: #c7c7c7;
-  
-.color-a {
-    color: #c7c7c7;
-}
 
-.color-b {
+  .toku-color-one {
     color: #c7c7c7;
-}
-  
+  }
+
+  .toku-color-two {
+    color: #c7c7c7;
+  }
+
   a {
     color: #c7c7c7;
   }
-  
+
   input {
     background: #292c33;
     color: #c7c7c7;
     border-color: #c7c7c7;
   }
-  
+
   button {
     background: #292c33;
     color: #c7c7c7;
     border-color: #c7c7c7;
   }
-  
+
   hr {
     color: #c7c7c7;
   }
-  
+
   .gsc-control-cse {
     font-family: "Montserrat", sans-serif !important;
     background-color: #292c33 !important;
     border-color: #292c33 !important;
   }
 
-  .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+  .gsc-webResult.gsc-result,
+  .gsc-results .gsc-imageResult {
     background-color: #292c33 !important;
     border-color: #292c33 !important;
   }
@@ -340,54 +361,59 @@ div.scroll {
     color: #c7c7c7 !important;
   }
 
-  .gs-webResult .gs-snippet, .gs-fileFormatType {
+  .gs-webResult .gs-snippet,
+  .gs-fileFormatType {
     color: #c7c7c7 !important;
   }
 
-  .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
+  .gs-webResult.gs-result a.gs-title:visited,
+  .gs-webResult.gs-result a.gs-title:visited b,
+  .gs-imageResult a.gs-title:visited,
+  .gs-imageResult a.gs-title:visited b {
     color: #c7c7c7 !important;
   }
 }
 
-.mint {  
+.mint {
   background: #a5baa9;
   color: #2b4c3d;
 
-.color-a {
+  .toku-color-one {
     color: #2b4c3d;
-}
+  }
 
-.color-b {
+  .toku-color-two {
     color: #2b4c3d;
-}
-  
+  }
+
   a {
     color: #2b4c3d;
   }
-  
+
   input {
     background: #fff;
     color: #2b4c3d;
     border-color: #2b4c3d;
   }
-  
+
   button {
     background: #a5baa9;
     color: #2b4c3d;
     border-color: #2b4c3d;
   }
-  
+
   hr {
     color: #2b4c3d;
   }
-  
+
   .gsc-control-cse {
     font-family: "Montserrat", sans-serif !important;
     background-color: #a5baa9 !important;
     border-color: #a5baa9 !important;
   }
 
-  .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+  .gsc-webResult.gsc-result,
+  .gsc-results .gsc-imageResult {
     background-color: #a5baa9 !important;
     border-color: #a5baa9 !important;
   }
@@ -412,12 +438,16 @@ div.scroll {
     color: #2b4c3d !important;
   }
 
-  .gs-webResult .gs-snippet, .gs-fileFormatType {
+  .gs-webResult .gs-snippet,
+  .gs-fileFormatType {
     color: #2b4c3d !important;
   }
 
-  .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
-    color: #2b4c3d!important;
+  .gs-webResult.gs-result a.gs-title:visited,
+  .gs-webResult.gs-result a.gs-title:visited b,
+  .gs-imageResult a.gs-title:visited,
+  .gs-imageResult a.gs-title:visited b {
+    color: #2b4c3d !important;
   }
 }
 
@@ -425,13 +455,13 @@ div.scroll {
   background: #f78820;
   color: #aa3a1f;
 
-.color-a {
+  .toku-color-one {
     color: #aa3a1f;
-}
+  }
 
-.color-b {
+  .toku-color-two {
     color: #aa3a1f;
-}
+  }
 
   a {
     color: #aa3a1f;
@@ -459,7 +489,8 @@ div.scroll {
     border-color: #f78820 !important;
   }
 
-  .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+  .gsc-webResult.gsc-result,
+  .gsc-results .gsc-imageResult {
     background-color: #f78820 !important;
     border-color: #f78820 !important;
   }
@@ -484,11 +515,15 @@ div.scroll {
     color: #aa3a1f !important;
   }
 
-  .gs-webResult .gs-snippet, .gs-fileFormatType {
+  .gs-webResult .gs-snippet,
+  .gs-fileFormatType {
     color: #aa3a1f !important;
   }
 
-  .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
+  .gs-webResult.gs-result a.gs-title:visited,
+  .gs-webResult.gs-result a.gs-title:visited b,
+  .gs-imageResult a.gs-title:visited,
+  .gs-imageResult a.gs-title:visited b {
     color: #aa3a1f !important;
   }
 }
@@ -497,13 +532,13 @@ div.scroll {
   background: #2e040b;
   color: #9f3645;
 
-.color-a {
+  .toku-color-one {
     color: #9f3645;
-}
+  }
 
-.color-b {
+  .toku-color-two {
     color: #9f3645;
-}
+  }
 
   a {
     color: #9f3645;
@@ -531,7 +566,8 @@ div.scroll {
     border-color: #2e040b !important;
   }
 
-  .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+  .gsc-webResult.gsc-result,
+  .gsc-results .gsc-imageResult {
     background-color: #2e040b !important;
     border-color: #2e040b !important;
   }
@@ -556,12 +592,15 @@ div.scroll {
     color: #9f3645 !important;
   }
 
-  .gs-webResult .gs-snippet, .gs-fileFormatType {
+  .gs-webResult .gs-snippet,
+  .gs-fileFormatType {
     color: #9f3645 !important;
   }
 
-  .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
+  .gs-webResult.gs-result a.gs-title:visited,
+  .gs-webResult.gs-result a.gs-title:visited b,
+  .gs-imageResult a.gs-title:visited,
+  .gs-imageResult a.gs-title:visited b {
     color: #9f3645 !important;
   }
 }
-
