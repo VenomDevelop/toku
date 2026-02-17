@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+body {
+    font-family: "Figtree", sans-serif;
+    margin: 0;
+    padding: 20px 20px 20px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    scroll-behavior: smooth;
+    /* border: solid 8px green; /* this does not work, the border covers the body not the screen size */
+}
+a {
+    color: #000000;
+    text-decoration: none;
+}
+nav {
+    background-color: #000000;
+    color: #8a8a8a;
+    padding: 8px 0px 8px 6px;
+    border-radius: 50px;
+    overflow: visible;
+    position: relative;
+    display: inline-block;
+    gap: 10px;
+    position: fixed;
+    top: 68px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+.nav-content {
+    font-family: "Figtree", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+/* the lion does not concern itself with the opinion of mobile users */
+nav a {
+    color: #8a8a8a;
+    text-decoration: none;
+    margin: 0px 1.3e 0px 0px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+nav a:hover{
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0px 1.3e 0px 0px;
+    font-size: 18px;
+}
+.nav-button {
+    font-family: "Figtree", sans-serif;
+    font-weight: 600;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 9px;
+    padding: 8px 14px;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+}
+.nav-button:hover {
+    font-family: "Figtree", sans-serif;
+    background-color: #000000;
+    color: #8a8a8a;
+    border: 1px solid #ffffff;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 9px;
+    padding: 8px 14px;
+    vertical-align: middle;
+}
+.logo-button {
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 3px;
+    padding: 8px 14px;
+    vertical-align: left;
+    width: 85px;
+    height: 40px;
+    overflow: hidden;
+}
+.toku-logo span:nth-of-type(odd) {
+    color: #f69904; /* Default: #f69904 */
+}
+.toku-logo span:nth-of-type(even) {
+    color: #9912ff; /* Default: #9912ff */
+}
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+#hero-box {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    z-index: -1;
+    margin-top: 0px;
+}
+#hero-img {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.home h1 {
+    font-size: 3em;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-me {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto 40px auto; 
+    text-align: left;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-me p {
+    margin: 0; 
+}
+
+.home > img { 
+    max-width: 250px;
+    height: auto;
+    margin: 40px auto; 
+    display: block;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 60px;
+    flex-wrap: wrap; 
+}
+
+.skills img {
+    height: 120px; 
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.skills img:hover {
+    transform: scale(1.1); 
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(138, 138, 138, 0.75), rgba(0, 0, 0, 0));
+    margin: 60px auto; 
+    width: 80%; 
+}
+
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 40px auto 80px auto;
+    text-align: left;
+}
+
+.container label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block; 
+    color: #333;
+}
+
+.container input[type=text],
+.container input[type=email], 
+.container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; 
+    margin-top: 6px;
+    margin-bottom: 20px;
+    resize: vertical; 
+    font-family: "Figtree", sans-serif;
+    font-size: 1em;
+}
+
+.container textarea {
+    height: 150px; 
+}
+
+.container input[type=submit] {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block; 
+    margin: 20px auto 0 auto;
+    width: fit-content; 
+}
+
+.container input[type=submit]:hover {
+    background-color: #555555; 
+}
+
+footer {
+    background-color: #000000;
+    color: #8a8a8a;
+    padding: 20px 0px; 
+    border-radius: 50px; 
+    margin-top: 50px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+footer .social {
+    display: flex;
+    gap: 25px; 
+    font-size: 18px; 
+}
+
+footer .social a {
+    color: #8a8a8a; 
+    transition: color 0.3s ease;
+}
+
+footer .social a:hover {
+    color: #ffffff;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+.ice-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+    padding: 20px; 
+    max-width: 1200px; 
+    margin: 40px auto; 
+}
+
+.ice-project {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: left; 
+    gap: 20px;
+    text-align: left; 
+    margin: 0 auto;
+    width: 900px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.ice-project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ice-thumbnail {
+    width: 400px; 
+    height: auto;
+    border-radius: 40px;
+    object-fit: cover; 
+    vertical-align: middle;
+}
+
+.ice-info {
+    text-align: left;
+    padding: 0px 20px 0px 0px;
+}

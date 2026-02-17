@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Polished Mobile Experience</title>
+    <style>
+        :root {
+            --transition-speed: 0.6s;
+            --app-margin: 15px; /* Small white border around screen */
+            --icon-size: 110px;
+            --focus-scale: 1.15;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: #fff; /* The white border around the section */
+            font-family: -apple-system, system-ui, sans-serif;
+        }
+
+        /* 1. FULL SCREEN LAYOUT WITH BORDERS */
+        .app-wrapper {
+            width: 100vw;
+            height: 100vh;
+            padding: var(--app-margin);
+            display: flex;
+        }
+
+        #mainSection {
+            flex: 1;
+            height: 100%;
+            border-radius: 35px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: background-color var(--transition-speed) cubic-bezier(0.2, 1, 0.3, 1);
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .category-header {
+            position: absolute;
+            top: 40px;
+            width: 100%;
+            padding: 0 40px;
+            color: white;
+            z-index: 10;
+        }
+
+        .category-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        /* 2. HORIZONTAL SCROLL AREA (FIXED CLIPPING) */
+        .icons-viewport {
+            width: 100%;
+            overflow-x: auto;
+            display: flex;
+            align-items: center;
+            /* Extra vertical padding ensures scaling icons aren't cut off */
+            padding-top: 40px; 
+            padding-bottom: 80px; 
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
+            -webkit-overflow-scrolling: touch; /* Ensures fluid touch on iOS */
+        }
+        .icons-viewport::-webkit-scrollbar { display: none; }
+
+        /* Centering spacers: 50% width minus half an icon width */
+        .scroll-spacer {
+            flex: 0 0 calc(50% - (var(--icon-size) / 2) - 15px);
+        }
+
+        .page-icon {
+            flex: 0 0 var(--icon-size);
+            height: var(--icon-size);
+            margin: 0 15px;
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 28px;
+            scroll-snap-align: center;
+            border: 2px solid transparent;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                        background-color 0.3s, border-color 0.3s;
+        }
+
+        .page-icon.focused {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-color: #ffffff;
+            transform: scale(var(--focus-scale));
+        }
+
+        /* 3. STATIC CENTERED INFO BUBBLE */
+        .bubble-container {
+            position: absolute;
+            bottom: 22%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+            pointer-events: none;
+        }
+
+        .info-bubble {
+            background: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            text-align: center;
+            min-width: 160px;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.3s, transform 0.4s;
+        }
+
+        .info-bubble.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Triangle pointer */
+        .info-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -8px;
+            border-width: 8px;
+            border-style: solid;
+            border-color: transparent transparent white transparent;
+        }
+
+        .b-title { font-weight: 800; font-size: 15px; color: #111; display: block; }
+        .b-creator { font-size: 12px; color: #777; display: block; margin-top: 2px; }
+
+        .hint {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <section id="mainSection">
+            <div class="category-header">
+                <p id="catName" class="category-title">Loading...</p>
+            </div>
+
+            <div id="iconsWrapper" class="icons-viewport">
+                <div class="scroll-spacer"></div>
+                <!-- Icons injected here -->
+                <div class="scroll-spacer"></div>
+            </div>
+
+            <div class="bubble-container">
+                <div id="infoBubble" class="info-bubble">
+                    <span id="bubbleTitle" class="b-title">Title</span>
+                    <span id="bubbleCreator" class="b-creator">Creator</span>
+                </div>
+            </div>
+
+            <div class="hint">Swipe up/down for more</div>
+        </section>
+    </div>
+
+    <script>
+        const categories = [
+            { title: "Design", color: "#6366f1", pages: [
+                { name: "Brand Identity", user: "Sarah K." },
+                { name: "Styleguide", user: "James M." },
+                { name: "Moodboard", user: "Sarah K." },
+                { name: "UI Kit", user: "Leo D." }
+            ]},
+            { title: "Marketing", color: "#10b981", pages: [
+                { name: "Q4 Strategy", user: "Marketing Team" },
+                { name: "Social Assets", user: "Emma W." },
+                { name: "Ad Campaign", user: "Chris P." }
+            ]},
+            { title: "Project Lab", color: "#f59e0b", pages: [
+                { name: "Prototype X", user: "Dev Lab" },
+                { name: "Analytics", user: "Data Dept" },
+                { name: "User Tests", user: "UX Research" },
+                { name: "Documentation", user: "Dev Lab" }
+            ]}
+        ];
+
+        let currentIdx = 0;
+        let isChangingCategory = false;
+        
+        const section = document.getElementById('mainSection');
+        const iconsWrapper = document.getElementById('iconsWrapper');
+        const bubble = document.getElementById('infoBubble');
+
+        function loadCategory(index) {
+            const data = categories[index];
+            section.style.backgroundColor = data.color;
+            document.getElementById('catName').innerText = data.title;
+
+            // Maintain spacers
+            const spacers = iconsWrapper.querySelectorAll('.scroll-spacer');
+            iconsWrapper.innerHTML = '';
+            iconsWrapper.appendChild(spacers[0]);
+
+            data.pages.forEach(p => {
+                const icon = document.createElement('div');
+                icon.className = 'page-icon';
+                icon.dataset.title = p.name;
+                icon.dataset.creator = p.user;
+                iconsWrapper.appendChild(icon);
+            });
+
+            iconsWrapper.appendChild(spacers[1]);
+            
+            // Re-center on first item
+            iconsWrapper.scrollLeft = 0;
+            checkCenterIcon();
+        }
+
+        // Logic to detect which icon is in the center and update the static bubble
+        function checkCenterIcon() {
+            const icons = document.querySelectorAll('.page-icon');
+            const centerLine = iconsWrapper.getBoundingClientRect().left + (iconsWrapper.offsetWidth / 2);
+            
+            let focusedIcon = null;
+            let closestDist = Infinity;
+
+            icons.forEach(icon => {
+                icon.classList.remove('focused');
+                const rect = icon.getBoundingClientRect();
+                const iconCenter = rect.left + (rect.width / 2);
+                const dist = Math.abs(centerLine - iconCenter);
+
+                if (dist < closestDist) {
+                    closestDist = dist;
+                    focusedIcon = icon;
+                }
+            });
+
+            // If an icon is close enough to center, highlight it and update stationary bubble
+            if (focusedIcon && closestDist < 60) {
+                focusedIcon.classList.add('focused');
+                document.getElementById('bubbleTitle').innerText = focusedIcon.dataset.title;
+                document.getElementById('bubbleCreator').innerText = focusedIcon.dataset.creator;
+                bubble.classList.add('visible');
+            } else {
+                bubble.classList.remove('visible');
+            }
+        }
+
+        iconsWrapper.addEventListener('scroll', checkCenterIcon);
+
+        // Vertical Category Switching (Desktop + Mobile)
+        function navCategory(dir) {
+            if (isChangingCategory) return;
+            const next = currentIdx + dir;
+            if (next >= 0 && next < categories.length) {
+                isChangingCategory = true;
+                currentIdx = next;
+                bubble.classList.remove('visible');
+                loadCategory(currentIdx);
+                setTimeout(() => { isChangingCategory = false; }, 600);
+            }
+        }
+
+        // Swipe Detection
+        let tStart = 0;
+        window.addEventListener('touchstart', e => tStart = e.touches[0].clientY, {passive: true});
+        window.addEventListener('touchend', e => {
+            const tEnd = e.changedTouches[0].clientY;
+            if (tStart - tEnd > 70) navCategory(1);
+            if (tStart - tEnd < -70) navCategory(-1);
+        });
+
+        // Wheel and Keyboard
+        window.addEventListener('wheel', e => {
+            if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && Math.abs(e.deltaY) > 30) {
+                navCategory(e.deltaY > 0 ? 1 : -1);
+            }
+        });
+
+        window.addEventListener('keydown', e => {
+            if (e.key === "ArrowDown") navCategory(1);
+            if (e.key === "ArrowUp") navCategory(-1);
+            // Smoothly move horizontal scroll for arrow keys
+            if (e.key === "ArrowRight") iconsWrapper.scrollBy({left: 140, behavior: 'smooth'});
+            if (e.key === "ArrowLeft") iconsWrapper.scrollBy({left: -140, behavior: 'smooth'});
+        });
+
+        loadCategory(0);
+    </script>
+</body>
+</html>
