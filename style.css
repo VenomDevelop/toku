@@ -189,9 +189,9 @@ div.scroll {
 
 .seasonal-theme-button {
   font-family: "Montserrat", sans-serif !important;
-  background-color: #343434 !important; /* Default: #fff */
-  color: #f1962b !important; /* Default: #292c33 */
-  border-color: #f1962b !important; /* Default: #292c33 */
+  background-color: #fff !important; /* Default: #fff */
+  color: #292c33 !important; /* Default: #292c33 */
+  border-color: #292c33 !important; /* Default: #292c33 */
   border-style: solid !important;
   border-width: 2px !important;
   cursor: pointer !important;
@@ -221,79 +221,79 @@ div.scroll {
 }
 
 .light {
-  background: #343434; /* Default: #fff */
-  color: #f1962b; /* Default: #292c33 */
+  background: #fff; /* Default: #fff */
+  color: #292c33; /* Default: #292c33 */
 
   .toku-color-one {
-    color: #f1962b; /* Default: #f69904*/
+    color: #f69904; /* Default: #f69904*/
   }
 
   .toku-color-two {
-    color: #f1962b; /* Default: #9912ff */
+    color: #9912ff; /* Default: #9912ff */
   }
 
   a {
-    color: #f1962b;
+    color: #292c33;
   }
 
   input {
-    background: #343434;
-    color: #f1962b;
-    border-color: #f1962b;
+    background: #fff;
+    color: #292c33;
+    border-color: #292c33;
   }
 
   button {
-    background: #343434;
-    color: #f1962b;
-    border-color: #f1962b;
+    background: #fff;
+    color: #292c33;
+    border-color: #292c33;
   }
 
   hr {
-    color: #f1962b;
+    color: #292c33;
   }
 
   .gsc-control-cse {
     font-family: "Montserrat", sans-serif !important;
-    background-color: #343434 !important;
-    border-color: #343434 !important;
+    background-color: #fff !important;
+    border-color: #fff !important;
   }
 
   .gsc-webResult.gsc-result,
   .gsc-results .gsc-imageResult {
-    background-color: #343434 !important;
-    border-color: #343434 !important;
+    background-color: #fff !important;
+    border-color: #fff !important;
   }
 
   .gcsc-find-more-on-google {
-    color: #f1962b !important;
+    color: #292c33 !important;
   }
 
   .gsc-result-info {
-    color: #f1962b !important;
+    color: #292c33 !important;
   }
 
   .gsc-orderby-label {
-    color: #f1962b !important;
+    color: #292c33 !important;
   }
 
   .gcsc-find-more-on-google-magnifier {
-    fill: #f1962b !important;
+    fill: #292c33 !important;
   }
 
   .gs-webResult div.gs-visibleUrl {
-    color: #f1962b !important;
+    color: #292c33 !important;
   }
 
   .gs-webResult .gs-snippet,
   .gs-fileFormatType {
-    color: #f1962b !important;
+    color: #292c33 !important;
   }
 
   .gs-webResult.gs-result a.gs-title:visited,
   .gs-webResult.gs-result a.gs-title:visited b,
   .gs-imageResult a.gs-title:visited,
   .gs-imageResult a.gs-title:visited b {
-    color: #f1962b !important;
+    color: #292c33 !important;
   }
 }
 
